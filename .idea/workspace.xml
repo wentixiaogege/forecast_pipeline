@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54a17ddd-9f16-4185-9fd2-699a8bf91ac8" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/forecast_pipeline$meta_model.coverage" NAME="meta_model Coverage Results" MODIFIED="1550828857817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$keras_util.coverage" NAME="keras_util Coverage Results" MODIFIED="1550752744095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$train.coverage" NAME="train Coverage Results" MODIFIED="1551019267346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_svd.coverage" NAME="prepare-svd Coverage Results" MODIFIED="1550754235369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$traditional_model.coverage" NAME="traditional_model Coverage Results" MODIFIED="1551329074105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_boxcox.coverage" NAME="prepare-numeric-boxcox Coverage Results" MODIFIED="1550754082803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$util.coverage" NAME="util Coverage Results" MODIFIED="1550826771148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic__1_.coverage" NAME="prepare-basic (1) Coverage Results" MODIFIED="1550639185831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_rank_norm.coverage" NAME="prepare-numeric-rank-norm Coverage Results" MODIFIED="1550754100498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic.coverage" NAME="prepare-basic Coverage Results" MODIFIED="1550754049433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_counts.coverage" NAME="prepare-categorical-counts Coverage Results" MODIFIED="1550754113195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$model.coverage" NAME="model Coverage Results" MODIFIED="1550755633826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_encoded.coverage" NAME="prepare-categorical-encoded Coverage Results" MODIFIED="1550754191414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$conf.coverage" NAME="conf Coverage Results" MODIFIED="1551324809890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/conf" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_unskew.coverage" NAME="prepare-numeric-unskew Coverage Results" MODIFIED="1550754095056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_dummy.coverage" NAME="prepare-categorical-dummy Coverage Results" MODIFIED="1550754118271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="meta_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/meta_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#398#1660#0" expanded="false" />
+                <element signature="e#1705#4845#0" expanded="false" />
+                <element signature="e#4893#10843#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/conf/conf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+              <folding>
+                <element signature="e#1363#1530#0" expanded="false" />
+                <element signature="e#1550#1681#0" expanded="false" />
+                <element signature="e#1710#1877#0" expanded="false" />
+                <element signature="e#1936#4330#0" expanded="false" />
+                <element signature="e#4348#6624#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepare-numeric-scaled.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prepare-numeric-scaled.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="traditional_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/traditional_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+              <folding>
+                <element signature="e#690#1210#0" expanded="false" />
+                <element signature="e#745#1210#0" expanded="false" />
+                <element signature="e#871#1210#0" expanded="false" />
+                <element signature="e#1241#1535#0" expanded="false" />
+                <element signature="e#1307#1535#0" expanded="false" />
+                <element signature="e#1563#5234#0" expanded="false" />
+                <element signature="e#1580#1696#0" expanded="false" />
+                <element signature="e#1787#2225#0" expanded="false" />
+                <element signature="e#2370#3398#0" expanded="false" />
+                <element signature="e#2746#2877#0" expanded="false" />
+                <element signature="e#3434#3509#0" expanded="false" />
+                <element signature="e#3614#4683#0" expanded="false" />
+                <element signature="e#3832#4492#0" expanded="false" />
+                <element signature="e#3990#4126#0" expanded="false" />
+                <element signature="e#4740#4959#0" expanded="false" />
+                <element signature="e#5008#5234#0" expanded="false" />
+                <element signature="e#5267#6008#0" expanded="false" />
+                <element signature="e#5284#5349#0" expanded="false" />
+                <element signature="e#5391#5496#0" expanded="false" />
+                <element signature="e#5621#5944#0" expanded="false" />
+                <element signature="e#5980#6008#0" expanded="false" />
+                <element signature="e#6038#8528#0" expanded="false" />
+                <element signature="e#6055#6062#0" expanded="false" />
+                <element signature="e#6107#6343#0" expanded="false" />
+                <element signature="e#6376#6456#0" expanded="false" />
+                <element signature="e#6376#6409#0" expanded="false" />
+                <element signature="e#6581#7666#0" expanded="false" />
+                <element signature="e#7084#7210#0" expanded="false" />
+                <element signature="e#7702#8528#0" expanded="false" />
+                <element signature="e#8560#10277#0" expanded="false" />
+                <element signature="e#8595#8613#0" expanded="false" />
+                <element signature="e#8738#8997#0" expanded="false" />
+                <element signature="e#8857#8997#0" expanded="false" />
+                <element signature="e#9033#9061#0" expanded="false" />
+                <element signature="e#9161#10277#0" expanded="false" />
+                <element signature="e#9192#10086#0" expanded="false" />
+                <element signature="e#9225#9305#0" expanded="false" />
+                <element signature="e#9510#9884#0" expanded="false" />
+                <element signature="e#9654#9803#0" expanded="false" />
+                <element signature="e#9752#9803#0" expanded="false" />
+                <element signature="e#9919#10054#0" expanded="false" />
+                <element signature="e#10318#10593#0" expanded="false" />
+                <element signature="e#10384#10593#0" expanded="false" />
+                <element signature="e#10623#12453#0" expanded="false" />
+                <element signature="e#10707#10841#0" expanded="false" />
+                <element signature="e#10966#12234#0" expanded="false" />
+                <element signature="e#11124#11318#0" expanded="false" />
+                <element signature="e#12270#12453#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepare-basic.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/prepare-basic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+              <folding>
+                <element signature="e#24#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepare-numeric-rank-norm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prepare-numeric-rank-norm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="43" column="45" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="45" />
+              <folding>
+                <element signature="e#25#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deep_model.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/deep_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#466#734#0" expanded="false" />
+                <element signature="e#772#859#0" expanded="false" />
+                <element signature="e#898#1488#0" expanded="false" />
+                <element signature="e#1529#2119#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepare-numeric-lin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prepare-numeric-lin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prepare-numeric-edges.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prepare-numeric-edges.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="41" />
+              <folding>
+                <element signature="e#25#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Adadelta</find>
+      <find>GradientBoostingRegressor</find>
+      <find>TruncatedSVD</find>
+      <find>xgbf-ce-6</find>
+      <find>n_folds</find>
+      <find>Training split</find>
+      <find>n_bags</find>
+      <find>Pipeline</find>
+      <find>train_r</find>
+      <find>n_iter</find>
+      <find>train_p</find>
+      <find>parts</find>
+      <find>feature_builders</find>
+      <find>get_feature_names</find>
+      <find>maes</find>
+      <find>l1_predictions</find>
+      <find>prediction_transform</find>
+      <find>feature_names</find>
+      <find>predictions_mode</find>
+      <find>set_train</find>
+      <find>time</find>
+      <find>numeric</find>
+      <find>boxcox</find>
+      <find>norm_y</find>
+      <find>y_norm</find>
+      <find>numeric_boxcox</find>
+      <find>numeric_edges</find>
+      <find>numeric_lin</find>
+      <find>numeric_rank_norm</find>
+      <find>numeric_scaled</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/model.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/src/model.py" />
+        <option value="$PROJECT_DIR$/src/models/model.py" />
+        <option value="$PROJECT_DIR$/src/models/keras_util.py" />
+        <option value="$PROJECT_DIR$/src/util.py" />
+        <option value="$PROJECT_DIR$/src/utils.py" />
+        <option value="$PROJECT_DIR$/src/train.py.bak" />
+        <option value="$PROJECT_DIR$/src/conf/__init__.py" />
+        <option value="$PROJECT_DIR$/src/README.md" />
+        <option value="$PROJECT_DIR$/src/prepare-basic.py" />
+        <option value="$PROJECT_DIR$/src/prepare-categorical-counts.py" />
+        <option value="$PROJECT_DIR$/src/prepare-categorical-dummy.py" />
+        <option value="$PROJECT_DIR$/src/prepare-categorical-encoded.py" />
+        <option value="$PROJECT_DIR$/src/prepare-cluster-rbf.py" />
+        <option value="$PROJECT_DIR$/src/prepare-manual.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-boxcox.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-combinations.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-edges.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-lin.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-rank-norm.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-scaled.py" />
+        <option value="$PROJECT_DIR$/src/prepare-numeric-unskew.py" />
+        <option value="$PROJECT_DIR$/src/prepare-svd.py" />
+        <option value="$PROJECT_DIR$/src/print-bucket-mae.py" />
+        <option value="$PROJECT_DIR$/src/print-power-correction.py" />
+        <option value="$PROJECT_DIR$/src/print-qr-correction.py" />
+        <option value="$PROJECT_DIR$/src/train.py" />
+        <option value="$PROJECT_DIR$/src/conf/conf.py" />
+        <option value="$PROJECT_DIR$/src/models/deep_model.py" />
+        <option value="$PROJECT_DIR$/src/models/meta_model.py" />
+        <option value="$PROJECT_DIR$/src/models/traditional_model.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1920" />
+    <option name="height" value="1032" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="forecast_pipeline" type="b2602c69:ProjectViewProjectNode" />
+              <item name="forecast_pipeline" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src\models" />
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src" />
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\input" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src\models" />
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src" />
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src\cache\basic" />
+      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.traditional_model">
+    <configuration name="conf" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/conf" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/conf/conf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="meta_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/models/meta_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="traditional_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/models/traditional_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="util" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/util.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.train" />
+      <item index="1" class="java.lang.String" itemvalue="Python.meta_model" />
+      <item index="2" class="java.lang.String" itemvalue="Python.util" />
+      <item index="3" class="java.lang.String" itemvalue="Python.conf" />
+      <item index="4" class="java.lang.String" itemvalue="Python.traditional_model" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.traditional_model" />
+        <item index="1" class="java.lang.String" itemvalue="Python.conf" />
+        <item index="2" class="java.lang.String" itemvalue="Python.train" />
+        <item index="3" class="java.lang.String" itemvalue="Python.meta_model" />
+        <item index="4" class="java.lang.String" itemvalue="Python.util" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54a17ddd-9f16-4185-9fd2-699a8bf91ac8" name="Default" comment="" />
+      <created>1550633064017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550633064017</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1920" height="1032" extended-state="0" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2566168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26812428" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34177214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23726977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17606445" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/train.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/train.py</url>
+          <line>123</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/prepare-basic.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/prepare-numeric-unskew.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="25" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/model.py" />
+    <entry file="file://$PROJECT_DIR$/train.py" />
+    <entry file="file://$PROJECT_DIR$/run.sh" />
+    <entry file="file://$PROJECT_DIR$/prepare-basic.py" />
+    <entry file="file://$PROJECT_DIR$/src/cache/basic/categorical-features.pickle" />
+    <entry file="file://$PROJECT_DIR$/input/train.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1035">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/categorical_counts-features.pickle" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1071" column="0" lean-forward="false" selection-start-line="1071" selection-start-column="0" selection-end-line="1071" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/bottomup/Lib/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="415" column="22" lean-forward="false" selection-start-line="415" selection-start-column="22" selection-end-line="415" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/envs/bottomup/Lib/site-packages/sklearn/decomposition/truncated_svd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="165" column="4" lean-forward="false" selection-start-line="165" selection-start-column="4" selection-end-line="165" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/prophet/Lib/site-packages/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="109" column="13" lean-forward="false" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/prophet/Lib/site-packages/keras/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="96" column="4" lean-forward="false" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cache/categorical-features.pickle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="416" column="8" lean-forward="false" selection-start-line="416" selection-start-column="8" selection-end-line="416" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/keras_util.py" />
+    <entry file="file://$PROJECT_DIR$/src/models/model.py" />
+    <entry file="file://$PROJECT_DIR$/src/util.py.bak" />
+    <entry file="file://$PROJECT_DIR$/src/util.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/scipy/stats/morestats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43163">
+          <caret line="2807" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2807" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xgb-xgbf-ce-6-fold-1-3.dump" />
+    <entry file="file://$PROJECT_DIR$/src/train.py.bak" />
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/-2069440558/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="462" column="4" lean-forward="false" selection-start-line="462" selection-start-column="4" selection-end-line="462" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conf/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/src/keras_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2231">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+          <folding>
+            <element signature="e#24#42#0" expanded="false" />
+            <element signature="e#234#348#0" expanded="false" />
+            <element signature="e#369#483#0" expanded="false" />
+            <element signature="e#522#582#0" expanded="false" />
+            <element signature="e#615#675#0" expanded="false" />
+            <element signature="e#712#821#0" expanded="false" />
+            <element signature="e#851#981#0" expanded="false" />
+            <element signature="e#1039#1657#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-categorical-counts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-categorical-dummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-categorical-encoded.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-cluster-rbf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-manual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-unskew.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-svd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="10" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/print-bucket-mae.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/print-power-correction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="10" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/print-qr-correction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/average.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#420#951#0" expanded="false" />
+            <element signature="e#991#1289#0" expanded="false" />
+            <element signature="e#1155#1275#0" expanded="false" />
+            <element signature="e#1190#1234#0" expanded="false" />
+            <element signature="e#1336#1574#0" expanded="false" />
+            <element signature="e#1420#1531#0" expanded="false" />
+            <element signature="e#3029#4019#0" expanded="false" />
+            <element signature="e#3452#3803#0" expanded="false" />
+            <element signature="e#3615#3720#0" expanded="false" />
+            <element signature="e#6960#7246#0" expanded="false" />
+            <element signature="e#9121#11403#0" expanded="false" />
+            <element signature="e#9411#9831#0" expanded="false" />
+            <element signature="e#9578#9744#0" expanded="false" />
+            <element signature="e#10363#10588#0" expanded="false" />
+            <element signature="e#10630#10772#0" expanded="false" />
+            <element signature="e#12250#12388#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-boxcox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="36" column="42" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <element signature="e#24#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-combinations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="26" column="56" lean-forward="false" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="56" />
+          <folding>
+            <element signature="e#25#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-edges.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="40" column="41" lean-forward="false" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="41" />
+          <folding>
+            <element signature="e#25#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-lin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-rank-norm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="43" column="45" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="45" />
+          <folding>
+            <element signature="e#25#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-numeric-scaled.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conf/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="e#1363#1530#0" expanded="false" />
+            <element signature="e#1550#1681#0" expanded="false" />
+            <element signature="e#1710#1877#0" expanded="false" />
+            <element signature="e#1936#4330#0" expanded="false" />
+            <element signature="e#4348#6624#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/deep_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#466#734#0" expanded="false" />
+            <element signature="e#772#859#0" expanded="false" />
+            <element signature="e#898#1488#0" expanded="false" />
+            <element signature="e#1529#2119#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/meta_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#398#1660#0" expanded="false" />
+            <element signature="e#1705#4845#0" expanded="false" />
+            <element signature="e#4893#10843#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/traditional_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+          <folding>
+            <element signature="e#690#1210#0" expanded="false" />
+            <element signature="e#745#1210#0" expanded="false" />
+            <element signature="e#871#1210#0" expanded="false" />
+            <element signature="e#1241#1535#0" expanded="false" />
+            <element signature="e#1307#1535#0" expanded="false" />
+            <element signature="e#1563#5234#0" expanded="false" />
+            <element signature="e#1580#1696#0" expanded="false" />
+            <element signature="e#1787#2225#0" expanded="false" />
+            <element signature="e#2370#3398#0" expanded="false" />
+            <element signature="e#2746#2877#0" expanded="false" />
+            <element signature="e#3434#3509#0" expanded="false" />
+            <element signature="e#3614#4683#0" expanded="false" />
+            <element signature="e#3832#4492#0" expanded="false" />
+            <element signature="e#3990#4126#0" expanded="false" />
+            <element signature="e#4740#4959#0" expanded="false" />
+            <element signature="e#5008#5234#0" expanded="false" />
+            <element signature="e#5267#6008#0" expanded="false" />
+            <element signature="e#5284#5349#0" expanded="false" />
+            <element signature="e#5391#5496#0" expanded="false" />
+            <element signature="e#5621#5944#0" expanded="false" />
+            <element signature="e#5980#6008#0" expanded="false" />
+            <element signature="e#6038#8528#0" expanded="false" />
+            <element signature="e#6055#6062#0" expanded="false" />
+            <element signature="e#6107#6343#0" expanded="false" />
+            <element signature="e#6376#6456#0" expanded="false" />
+            <element signature="e#6376#6409#0" expanded="false" />
+            <element signature="e#6581#7666#0" expanded="false" />
+            <element signature="e#7084#7210#0" expanded="false" />
+            <element signature="e#7702#8528#0" expanded="false" />
+            <element signature="e#8560#10277#0" expanded="false" />
+            <element signature="e#8595#8613#0" expanded="false" />
+            <element signature="e#8738#8997#0" expanded="false" />
+            <element signature="e#8857#8997#0" expanded="false" />
+            <element signature="e#9033#9061#0" expanded="false" />
+            <element signature="e#9161#10277#0" expanded="false" />
+            <element signature="e#9192#10086#0" expanded="false" />
+            <element signature="e#9225#9305#0" expanded="false" />
+            <element signature="e#9510#9884#0" expanded="false" />
+            <element signature="e#9654#9803#0" expanded="false" />
+            <element signature="e#9752#9803#0" expanded="false" />
+            <element signature="e#9919#10054#0" expanded="false" />
+            <element signature="e#10318#10593#0" expanded="false" />
+            <element signature="e#10384#10593#0" expanded="false" />
+            <element signature="e#10623#12453#0" expanded="false" />
+            <element signature="e#10707#10841#0" expanded="false" />
+            <element signature="e#10966#12234#0" expanded="false" />
+            <element signature="e#11124#11318#0" expanded="false" />
+            <element signature="e#12270#12453#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prepare-basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
