@@ -10,6 +10,12 @@ import numpy as np
 import pandas as pd
 from utils import Dataset
 from keras.callbacks import Callback
+# from keras.engine.training import collect_trainable_weights
+from keras.models import load_model
+from keras import backend as K
+import warnings
+
+
 categoricals = Dataset.get_part_features('categorical')
 print(categoricals)
 
@@ -180,7 +186,8 @@ class ExponentialMovingAverage(Callback):
                 self.best = np.Inf
 
     def on_train_begin(self, logs={}):
-        self.sym_trainable_weights = collect_trainable_weights(self.model)
+        # self.sym_trainable_weights = collect_trainable_weights(self.model)
+        self.sym_trainable_weights = self.model.trainable_weights
         # Initialize moving averaged weights using original model values
         self.mv_trainable_weights_vals = {x.name: K.get_value(x) for x in
                                           self.sym_trainable_weights}
@@ -240,7 +247,9 @@ class ExponentialMovingAverage(Callback):
         self.model.save(filepath, overwrite=True)
         model2 = load_model(filepath, custom_objects=self.custom_objects)
 
-        for w2, w in zip(collect_trainable_weights(model2), collect_trainable_weights(self.model)):
+        # for w2, w in zip(collect_trainable_weights(model2), collect_trainable_weights(self.model)):
+        for w2, w in zip(model2.trainable_weights, self.model.trainable_weights):
+
             K.set_value(w2, self.mv_trainable_weights_vals[w.name])
 
         return model2

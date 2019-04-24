@@ -100,7 +100,7 @@ class Dataset(object):
         if cls.part_types[part_name][0] == 's':
             return load_csr('%s/%s-%s.npz' % (cache_dir, part_name, name))
         else:
-            return np.load('%s/%s-%s.npy' % (cache_dir, part_name, name))
+            return np.load('%s/%s-%s.npy' % (cache_dir, part_name, name), allow_pickle=True)
 
     @classmethod
     def concat(cls, datasets):
