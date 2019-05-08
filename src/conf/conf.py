@@ -8,19 +8,27 @@ __author__ = 'lijingjie'
 import sys
 sys.path.insert(0, 'src/models/')
 sys.path.insert(0, 'src/')
+sys.path.insert(0, 'models')
 sys.path.insert(0, './')
-sys.path.insert(0, 'models/')
+
+
 from deep_model import *
 from meta_model import *
 from traditional_model import *
 import itertools
 from scipy.stats import boxcox
 from sklearn.ensemble import ExtraTreesRegressor, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor
+from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
+
 from keras.optimizers import SGD, Adam, Adadelta
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import Ridge
 from sklearn.svm import SVR
+from sklearn.svm import SVC
+
 from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neighbors import KNeighborsClassifier
+
 from sklearn.decomposition import TruncatedSVD
 
 #############transform###############################################
@@ -64,162 +72,174 @@ def y_pow_ofs(p, ofs):
 
 #for stage2 and stage3 outputs features
 l1_predictions = [
-    '20161204-2003-lr-ce-1278.84184',
-    '20161204-2029-lr-cd-1237.43406',
-    '20161204-2357-lr-cd-2-1256.45156',
-    '20161204-2047-lr-svd-1237.79692',
-    '20161204-2128-lr-cd-nr-1237.32174',
-    '20161204-2048-lr-svd-clrbf-1210.53687',
-    '20161204-2130-lr-svd-clrbf-2-1202.70592',
-    '20161204-2359-lr-svd-clrbf-3-1212.10956',
+    '20181204-2003-lr-ce-1278.84184',
+    '20181204-2029-lr-cd-1237.43406',
+    '20181204-2357-lr-cd-2-1256.45156',
+    '20181204-2047-lr-svd-1237.79692',
+    '20181204-2128-lr-cd-nr-1237.32174',
+    '20181204-2048-lr-svd-clrbf-1210.53687',
+    '20181204-2130-lr-svd-clrbf-2-1202.70592',
+    '20181204-2359-lr-svd-clrbf-3-1212.10956',
 
-    '20161207-0538-et-ce-1207.07344',
-    '20161207-0601-et-ce-2-1204.68542',
-    '20161207-0618-et-ce-3-1199.82233',
-    '20161207-0030-et-ce-4-1194.75138',
+    '20181207-0538-et-ce-1207.07344',
+    '20181207-0601-et-ce-2-1204.68542',
+    '20181207-0618-et-ce-3-1199.82233',
+    '20181207-0030-et-ce-4-1194.75138',
 
-    '20161207-0309-rf-ce-2-1193.61802',
-    '20161206-2200-rf-ce-3-1190.27838',
-    '20161207-0257-rf-ce-4-1186.23675',
+    '20181207-0309-rf-ce-2-1193.61802',
+    '20181206-2200-rf-ce-3-1190.27838',
+    '20181207-0257-rf-ce-4-1186.23675',
 
-    '20161207-1041-rf-ce-rot-1-1236.84994',
+    '20181207-1041-rf-ce-rot-1-1236.84994',
 
-    '20161205-0006-gb-ce-1151.11060',
+    '20181205-0006-gb-ce-1151.11060',
 
-    '20161207-1643-knn1-1370.65015',
-    '20161207-2025-knn2-1364.78537',
+    '20181207-1643-knn1-1370.65015',
+    '20181207-2025-knn2-1364.78537',
 
-    '20161208-0022-svr1-1224.28418',
+    '20181208-0022-svr1-1224.28418',
 
-    '20161210-1914-nn-cd-2-1134.92794',
-    '20161210-1651-nn-cd-3-1132.48048',
-    '20161206-2201-nn-cd-4-1132.05160',
+    '20181210-1914-nn-cd-2-1134.92794',
+    '20181210-1651-nn-cd-3-1132.48048',
+    '20181206-2201-nn-cd-4-1132.05160',
 
-    '20161210-1142-nn-cd-clrbf-1132.71487',
-    '20161207-1509-nn-cd-clrbf-2-1131.72969',
-    '20161209-1459-nn-cd-clrbf-3-1132.49145',
-    '20161127-2119-nn-cd-clrbf-4-1136.33283',#
-    '20161209-0136-nn-cd-clrbf-5-1131.69357',
-    '20161201-0719-nn-cd-clrbf-6-1145.02510',#
-    '20161211-0636-nn-cd-clrbf-7-1133.32506',
+    '20181210-1142-nn-cd-clrbf-1132.71487',
+    '20181207-1509-nn-cd-clrbf-2-1131.72969',
+    '20181209-1459-nn-cd-clrbf-3-1132.49145',
+    '20181127-2119-nn-cd-clrbf-4-1136.33283',#
+    '20181209-0136-nn-cd-clrbf-5-1131.69357',
+    '20181201-0719-nn-cd-clrbf-6-1145.02510',#
+    '20181211-0636-nn-cd-clrbf-7-1133.32506',
 
-    '20161207-0622-nn-svd-cd-clrbf-1-1130.29286',
-    '20161201-2010-nn-svd-cd-clrbf-2-1135.79176',#
-    '20161206-1656-nn-svd-cd-clrbf-3-1132.02805',
+    '20181207-0622-nn-svd-cd-clrbf-1-1130.29286',
+    '20181201-2010-nn-svd-cd-clrbf-2-1135.79176',#
+    '20181206-1656-nn-svd-cd-clrbf-3-1132.02805',
 
-    '20161211-0413-lgb-cd-1-1133.89988',
-    '20161207-2034-lgb-cd-2-1131.65831',
+    '20181211-0413-lgb-cd-1-1133.89988',
+    '20181207-2034-lgb-cd-2-1131.65831',
 
-    '20161209-1932-lgb-ce-1-1129.07923',
-    '20161206-1926-lgb-ce-2-1127.68636',
+    '20181209-1932-lgb-ce-1-1129.07923',
+    '20181206-1926-lgb-ce-2-1127.68636',
 
-    '20161209-0939-xgb-ce-2-1133.00048',
-    '20161208-1351-xgb-ce-3-1132.08820',
+    '20181209-0939-xgb-ce-2-1133.00048',
+    '20181208-1351-xgb-ce-3-1132.08820',
 
-    '20161209-1442-xgbf-ce-2-1133.85036',
-    '20161209-1109-xgbf-ce-3-1128.63753',
-    '20161208-1109-xgbf-ce-4-1128.84209',
-    '20161208-2307-xgbf-ce-4-2-1126.89842',
-    '20161204-1303-xgbf-ce-5-1131.40964',
-    '20161205-1313-xgbf-ce-6-1128.77616',
-    '20161206-1400-xgbf-ce-7-1126.68014',
-    '20161207-0946-xgbf-ce-8-1124.33319',
-    '20161204-1025-xgbf-ce-9-1123.42983',
-    '20161207-2128-xgbf-ce-10-1125.78132',
-    '20161206-0327-xgbf-ce-12-1138.85463',
-    '20161207-0954-xgbf-ce-13-1122.64977',
-    '20161210-0733-xgbf-ce-14-1125.56181',
+    '20181209-1442-xgbf-ce-2-1133.85036',
+    '20181209-1109-xgbf-ce-3-1128.63753',
+    '20181208-1109-xgbf-ce-4-1128.84209',
+    '20181208-2307-xgbf-ce-4-2-1126.89842',
+    '20181204-1303-xgbf-ce-5-1131.40964',
+    '20181205-1313-xgbf-ce-6-1128.77616',
+    '20181206-1400-xgbf-ce-7-1126.68014',
+    '20181207-0946-xgbf-ce-8-1124.33319',
+    '20181204-1025-xgbf-ce-9-1123.42983',
+    '20181207-2128-xgbf-ce-10-1125.78132',
+    '20181206-0327-xgbf-ce-12-1138.85463',
+    '20181207-0954-xgbf-ce-13-1122.64977',
+    '20181210-0733-xgbf-ce-14-1125.56181',
 
-    '20161209-0336-xgbf-ce-clrbf-1-1151.51483',
-    '20161204-2046-xgbf-ce-clrbf-2-1139.21753',
+    '20181209-0336-xgbf-ce-clrbf-1-1151.51483',
+    '20181204-2046-xgbf-ce-clrbf-2-1139.21753',
 
-    '20161205-0123-libfm-cd-1196.11333',
-    '20161205-1342-libfm-svd-1177.69251',
+    '20181205-0123-libfm-cd-1196.11333',
+    '20181205-1342-libfm-svd-1177.69251',
 ]
 l2_predictions = [
     ([
-        '20161209-2249-l2-knn-1128.69039',
-        '20161209-2321-l2-svd-knn-1128.60543',
+        '20181209-2249-l2-knn-1128.69039',
+        '20181209-2321-l2-svd-knn-1128.60543',
 
-        '20161203-0232-l2-knn-1128.52203',
-        '20161203-0135-l2-svd-knn-1128.44971',
-        '20161130-0230-l2-svd-svr-1128.15513',
+        '20181203-0232-l2-knn-1128.52203',
+        '20181203-0135-l2-svd-knn-1128.44971',
+        '20181130-0230-l2-svd-svr-1128.15513',
     ], {'power': 1.05}),
 
     ([
-        '20161210-2219-l2-lr-1119.94373',
-        '20161210-2219-l2-lr-2-1118.49848',
-        '20161210-2220-l2-lr-3-1118.45564',
+        '20181210-2219-l2-lr-1119.94373',
+        '20181210-2219-l2-lr-2-1118.49848',
+        '20181210-2220-l2-lr-3-1118.45564',
     ], {'power': 1.03}),
 
     [
-        '20161205-0025-l2-qr-1117.03435',
-        '20161207-0053-l2-qr-1116.97884',
-        '20161209-1948-l2-qr-1116.63408',
+        '20181205-0025-l2-qr-1117.03435',
+        '20181207-0053-l2-qr-1116.97884',
+        '20181209-1948-l2-qr-1116.63408',
     ],
 
     [
-        '20161209-2101-l2-gb-1117.93768',
-        '20161202-0020-l2-gb-1118.40560',
-        '20161211-1858-l2-gb-1117.60834',
-        '20161211-2153-l2-gb-2-1117.41247',
+        '20181209-2101-l2-gb-1117.93768',
+        '20181202-0020-l2-gb-1118.40560',
+        '20181211-1858-l2-gb-1117.60834',
+        '20181211-2153-l2-gb-2-1117.41247',
     ],
 
     ([
-        '20161125-0753-l2-xgbf-1119.04996',
-        '20161130-0258-l2-xgbf-1118.96658', #
-        '20161202-0702-l2-xgbf-1118.63437', #
-        '20161203-0636-l2-xgbf-1118.58470', #
-        '20161210-0712-l2-xgbf-1118.33470',
+        '20181125-0753-l2-xgbf-1119.04996',
+        '20181130-0258-l2-xgbf-1118.96658', #
+        '20181202-0702-l2-xgbf-1118.63437', #
+        '20181203-0636-l2-xgbf-1118.58470', #
+        '20181210-0712-l2-xgbf-1118.33470',
     ], {'power': 1.02}),
 
     ([
-        '20161202-1724-l2-xgbf-2-1118.43083',
-        '20161210-1952-l2-xgbf-2-1118.15322',
+        '20181202-1724-l2-xgbf-2-1118.43083',
+        '20181210-1952-l2-xgbf-2-1118.15322',
 
-        '20161130-2133-l2-xgbf-3-1118.75364', #
-        '20161203-1336-l2-xgbf-3-1118.46005', #
-        '20161211-0607-l2-xgbf-3-1118.16984',
+        '20181130-2133-l2-xgbf-3-1118.75364', #
+        '20181203-1336-l2-xgbf-3-1118.46005', #
+        '20181211-0607-l2-xgbf-3-1118.16984',
     ], {'power': 1.02}),
 
     [
-        '20161129-1219-l2-nn-1117.84214', #
-        '20161202-0157-l2-nn-1117.33963', #
-        '20161205-0337-l2-nn-1117.09224',
-        '20161208-0126-l2-nn-1117.15231',
-        '20161209-1814-l2-nn-1117.10987',
+        '20181129-1219-l2-nn-1117.84214', #
+        '20181202-0157-l2-nn-1117.33963', #
+        '20181205-0337-l2-nn-1117.09224',
+        '20181208-0126-l2-nn-1117.15231',
+        '20181209-1814-l2-nn-1117.10987',
     ],
 
     [
-        '20161124-1430-l2-nn-2-1117.28245', #
-        '20161125-0958-l2-nn-2-1117.29028', #
-        '20161129-1021-l2-nn-2-1117.39540', #
-        '20161129-2228-l2-nn-2-1117.01003', #
-        '20161202-0007-l2-nn-2-1116.65633', #
-        '20161207-2324-l2-nn-2-1116.84297',
+        '20181124-1430-l2-nn-2-1117.28245', #
+        '20181125-0958-l2-nn-2-1117.29028', #
+        '20181129-1021-l2-nn-2-1117.39540', #
+        '20181129-2228-l2-nn-2-1117.01003', #
+        '20181202-0007-l2-nn-2-1116.65633', #
+        '20181207-2324-l2-nn-2-1116.84297',
     ],
 
     [
-        '20161210-0302-l2-nn-3-1116.53105',
-        '20161212-1230-l2-nn-3-1116.40752',
-        '20161208-1708-l2-nn-5-1116.86086',
-        '20161210-0624-l2-nn-5-1116.83111',
-        '20161211-1757-l2-nn-6-1116.60009',
+        '20181210-0302-l2-nn-3-1116.53105',
+        '20181212-1230-l2-nn-3-1116.40752',
+        '20181208-1708-l2-nn-5-1116.86086',
+        '20181210-0624-l2-nn-5-1116.83111',
+        '20181211-1757-l2-nn-6-1116.60009',
     ],
 
     [
-        '20161211-1956-l2-xgbf-4-1118.39030',
-        '20161212-0519-l2-xgbf-4-2-1118.44814',
-        '20161212-1552-l2-xgbf-4-3-1118.46351',
-        '20161212-0959-l2-xgbf-5-1118.80387',
-        '20161212-1950-l2-xgbf-5-2-1118.46393',
+        '20181211-1956-l2-xgbf-4-1118.39030',
+        '20181212-0519-l2-xgbf-4-2-1118.44814',
+        '20181212-1552-l2-xgbf-4-3-1118.46351',
+        '20181212-0959-l2-xgbf-5-1118.80387',
+        '20181212-1950-l2-xgbf-5-2-1118.46393',
     ]
 ]
 #configure for stage1 stage2 stage3
 presets = {
     'xgb-tst': {
-        'features': ['numeric'],
-        'model': Xgb({'max_depth': 5, 'eta': 0.05}, n_iter=10),
+        'features': ['numeric','categorical','svd'],
+        'model': Xgb({'objective': 'multi:softprob',
+                      'eval_metric': 'mlogloss',
+                      'num_class': 12,
+                      'max_depth': 31,
+                      'learning_rate': 0.05,
+                      'num_leaves': 31,
+                      'lambda_l1': 0.01,
+                      'lambda_l2': 10,
+                      'seed': 2019,
+                      'feature_fraction': 0.8,
+                      'bagging_fraction': 0.8,
+                      'bagging_freq': 4,
+                      }, n_iter=1),
         'param_grid': {'colsample_bytree': [0.2, 1.0]},
     },
 
@@ -669,22 +689,39 @@ presets = {
     },
 
     'lgb-tst': {
-        'features': ['numeric'],
-        'y_transform': y_log_ofs(200),
+        'features': ['numeric','categorical'],
         'n_bags': 1,
         'model': LightGBM({
-            'num_iterations': 100,
-            'learning_rate': 0.01,
-            'num_leaves': 50,
-            'min_data_in_leaf': 8,
+            'num_iterations': 5000,
+            'learning_rate': 0.05,
+            'num_leaves': 31,
+            'min_data_in_leaf': 30,
             'feature_fraction': 0.2,
             'bagging_fraction': 0.3,
             'bagging_freq': 20,
             'metric_freq': 10,
-            'metric': 'l1',
+            'metric': 'multi_logloss',
+            'num_class':12,
+            'application':'multiclass'
         }),
     },
-
+    'lgb-tst1': {
+        'features': ['numeric','categorical','svd'],
+        'n_bags': 1,
+        'model': Official_LightGBM({
+            'objective': 'multiclass',
+            'metrics': 'multiclass',
+            'learning_rate': 0.05,
+            'num_leaves': 31,
+            'lambda_l1': 0.01,
+            'lambda_l2': 10,
+            'num_class': 12,
+            'seed': 2019,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 4
+        }, n_iter=1000),
+    },
     'lgb-cd-1': {
         'features': ['numeric', 'categorical_dummy'],
         'y_transform': y_norm,
@@ -794,6 +831,11 @@ presets = {
             'metric_freq': 40
         }),
     },
+    'libfm-softmax-tst': {
+        'features': ['numeric','categorical','svd'],
+        'model': LibFM_softmax(params={
+        },n_iter=1),
+    },
 
     'libfm-cd': {
         'features': ['numeric_scaled', 'categorical_dummy'],
@@ -832,8 +874,8 @@ presets = {
     },
 
     'nn-tst': {
-        'features': ['numeric'],
-        'model': Keras(nn_mlp, {'l1': 1e-3, 'l2': 1e-3, 'n_epoch': 1, 'batch_size': 128, 'layers': [10]}),
+        'features': ['numeric','categorical','svd'],
+        'model': Keras(nn_mlp, {'l1': 1e-3, 'l2': 1e-3, 'n_epoch': 100, 'batch_size': 128, 'layers': [300,100]}),
     },
 
     'nn1': {
@@ -954,6 +996,11 @@ presets = {
         'model': Keras(nn_mlp, lambda: {'l1': 1e-5, 'l2': 1e-5, 'n_epoch': 80, 'batch_size': 128, 'layers': [400, 200], 'dropouts': [0.4, 0.2], 'optimizer': Adadelta(), 'callbacks': [ExponentialMovingAverage(save_mv_ave_model=False)]}, scale=True),
     },
 
+    'gb-tst': {
+        'features': ['numeric'],
+        'model': Sklearn(GradientBoostingClassifier(n_estimators=1, max_depth=7, max_features=0.2)),
+        'param_grid': {'n_estimators': (1, 400), 'max_depth': (6, 8), 'max_features': (0.1, 0.4)},
+    },
     'gb-ce': {
         'features': ['numeric', 'categorical_encoded'],
         'model': Sklearn(GradientBoostingRegressor(loss='lad', n_estimators=300, max_depth=7, max_features=0.2)),
@@ -965,6 +1012,13 @@ presets = {
         'y_transform': y_log_ofs(200),
         'model': Sklearn(AdaBoostRegressor(loss='linear', n_estimators=300)),
         'param_grid': {'n_estimators': (50, 400), 'learning_rate': (0.1, 1.0)},
+    },
+
+    'et-tst': {
+        'features': ['numeric'],
+        # 'y_transform': y_log,
+        'model': Sklearn(ExtraTreesClassifier(2, max_features=0.2, n_jobs=-1)),
+
     },
 
     'et-ce': {

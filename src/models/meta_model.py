@@ -4,13 +4,13 @@ __author__ = 'lijingjie'
 import sys
 sys.path.insert(0, 'src/models/')
 sys.path.insert(0, 'src/')
+sys.path.insert(0, '../conf')
 sys.path.insert(0, './')
 sys.path.insert(0, 'conf/')
 import numpy as np
 import pandas as pd
-from utils import Dataset
+from allstate.utils import Dataset
 from keras.callbacks import Callback
-# from keras.engine.training import collect_trainable_weights
 from keras.models import load_model
 from keras import backend as K
 import warnings

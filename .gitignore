@@ -1,4 +1,12 @@
 cache
 preds
+lightgbm
+xgboost
 logs
+libfm_models
+starting*
+*models
 *.pyc
+*.csv
+input
+.idea
