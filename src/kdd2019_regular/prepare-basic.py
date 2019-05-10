@@ -171,6 +171,12 @@ def gen_plan_feas(data):
 def gen_time_feas(data):
     data['req_time'] = pd.to_datetime(data['req_time'])
     data['cat_weekday'] = data['req_time'].dt.dayofweek
+    data['cat_is_weekday'] = data['req_time'].dt.dayofweek.apply(lambda x:0 if x in[1,2,3,4,5] else 1)
+    data['cat_month']=data['req_time'].dt.month
+    data['cat_season'] = data['req_time'].dt.month.apply(lambda x:0 if x<=3 else 1 if x <=6 else 2 if x<=9 else 3)
+    data['cat_dayofyear'] = data['req_time'].dt.dayofyear
+    data['cat_timeofday'] = data['req_time'].dt.hour.apply(lambda x: 0 if x<=6 else 1 if x<=12 else 2 if x<=18 else 3)
+    # # data['cat_holiday'] =
     data['cat_hour'] = data['req_time'].dt.hour
     data = data.drop(['req_time'], axis=1)
     return data
@@ -204,23 +210,48 @@ def merge_raw_data():
     print('raw data columns: {}'.format(', '.join(data.columns)))
     return data
 
+def split_train_val(data):
+    X = data[data.columns.difference(['click_mode'],sort=False)].values
+    y = data[['click_mode']].values
+    from sklearn.model_selection import train_test_split
 
-if True:
+    print X.shape
+    print y.shape
+    print data.shape
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.22, random_state=42)
+
+    print X_train.shape
+    print  y_train.shape
+    print y_train.T.shape
+    train = pd.DataFrame(np.concatenate((y_train,X_train), axis=1),columns=data.columns)
+    val = pd.DataFrame(np.concatenate((y_val,X_val), axis=1),columns=data.columns)
+    return train, val
+
+if False:
     data = merge_raw_data()
     data = gen_od_feas(data)
     data = gen_profile_feas(data)
     data = gen_plan_feas(data)
     data = gen_time_feas(data)
 
+    data.to_csv('../../input/kdd2019_regular/phase1/data.csv')
+    # data=pd.read_csv('../../input/kdd2019_regular/phase1/data.csv', index_col=0)
+
+
     data[data.click_mode!=-1].to_csv('../../input/kdd2019_regular/phase1/train.csv')
+
+    train,val = split_train_val(data[data.click_mode!=-1])
+    train.to_csv('../../input/kdd2019_regular/phase1/train1.csv')
+    val.to_csv('../../input/kdd2019_regular/phase1/val1.csv')
+
     data[data.click_mode==-1].to_csv('../../input/kdd2019_regular/phase1/test.csv')
 
-for name in ['train', 'test']:
+for name in ['train','test','train1', 'val1']:
     print("Processing %s..." % name)
-    data = pd.read_csv('../../input/kdd2019_regular/phase1/%s.csv' % name)
+    data = pd.read_csv('../../input/kdd2019_regular/phase1/%s.csv' % name, index_col=0)
 
     # Save column names
-    if name == 'train':
+    if name in ['train1','train']:
         cat_columns = [c for c in data.columns if c.startswith('cat')]
         num_columns = [c for c in data.columns if c.startswith('num')]
 

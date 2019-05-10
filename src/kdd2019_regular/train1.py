@@ -82,7 +82,7 @@ def eval_f(y_pred, train_data):
 Xgb.default_params['nthread'] = 4
 LightGBM.default_params['num_threads']=4
 
-n_folds = 3
+n_folds = 2
 n_classes=12
 # set_train = 'knn3'
 # set_train = 'xgb-tst'
@@ -110,10 +110,10 @@ y_aggregator = preset.get('agg', np.mean)# 变换方式
 y_transform, y_inv_transform = preset.get('y_transform', (lambda y: y, lambda y: y))
 
 print("Loading train data...")
-train_x = load_x('train', preset)
-train_y = Dataset.load_part('train', 'click_mode')
+train_x = load_x('train1', preset)
+train_y = Dataset.load_part('train1', 'click_mode')
 train_p = np.zeros((train_x.shape[0], n_splits * n_bags,n_classes))
-train_r = Dataset.load('train', parts=np.unique(sum([b.requirements for b in feature_builders], ['click_mode'])))# trian reconstruct features
+train_r = Dataset.load('train1', parts=np.unique(sum([b.requirements for b in feature_builders], ['click_mode'])))# trian reconstruct features
 
 feature_names = extract_feature_names(preset)
 
@@ -146,8 +146,8 @@ if False:
     preset['model'].optimize(opt_train_x, y_transform(opt_train_y), opt_eval_x, y_transform(opt_eval_y), preset['param_grid'], eval_func=lambda yt, yp: log_loss(y_inv_transform(yt), y_inv_transform(yp)))
 
 print("Loading test data...")
-test_x = load_x('test', preset)
-test_r = Dataset.load('test', parts=np.unique([b.requirements for b in feature_builders]))
+test_x = load_x('val1', preset)
+test_r = Dataset.load('val1', parts=np.unique([b.requirements for b in feature_builders]))
 test_foldavg_p = np.zeros((test_x.shape[0], n_splits * n_bags * n_folds,n_classes))
 test_fulltrain_p = np.zeros((test_x.shape[0], n_bags,n_classes))
 
@@ -270,7 +270,7 @@ for split in range(n_splits):
         del fold_train_x, fold_train_y, fold_eval_x, fold_eval_y
 
 #全量去训练
-if True:
+if False:
     print("  Full...")
 
     full_train_x = train_x
@@ -335,26 +335,36 @@ if True:
 # Analyze predictions
 f1_scores_mean = np.mean(f1_scores)
 f1_scores_std = np.std(f1_scores)
-f1_score = f1_score(train_y, y_aggregator(y_inv_transform(train_p), axis=1).argmax(-1),average='weighted')
+f1_score1 = f1_score(train_y, y_aggregator(y_inv_transform(train_p), axis=1).argmax(-1),average='weighted')
 
 # Aggregate predictions
-train_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(train_p), axis=1),axis=1), index=Dataset.load_part('train', 'sid'))
-test_foldavg_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_foldavg_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
-test_fulltrain_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
+name = "%s-%s-%.5f" % (datetime.datetime.now().strftime('%Y%m%d-%H%M'), set_train, f1_score1)
+test_foldavg_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_foldavg_p), axis=1), index=Dataset.load_part('val1', 'sid'))
+test_foldavg_p_backup.to_csv('val1/%s-%s.csv' % (name, 'test_foldavg_p_backup'), header=True)
+
+
+
+train_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(train_p), axis=1),axis=1), index=Dataset.load_part('train1', 'sid'))
+test_foldavg_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_foldavg_p), axis=1),axis=1), index=Dataset.load_part('val1', 'sid'))
+test_fulltrain_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1),axis=1), index=Dataset.load_part('val1', 'sid'))
 
 print('---------------------------------')
 print("CV f1_score: %.5f +- %.5f" % (f1_scores_mean, f1_scores_std))
-print("CV RES f1_score: %.5f" % f1_score)
+print("CV RES f1_score: %.5f" % f1_score1)
 
-name = "%s-%s-%.5f" % (datetime.datetime.now().strftime('%Y%m%d-%H%M'), set_train, f1_score)
+# checking
+print("checking test_foldavg_p f1_score: %.5f" %  f1_score(Dataset.load_part('val1', 'click_mode'), test_foldavg_p,average='weighted'))
+print("checking test_fulltrain_p f1_score: %.5f" %  f1_score(Dataset.load_part('val1', 'click_mode'), test_fulltrain_p,average='weighted'))
+
+
 
 print('---------------------------------')
 print("Saving predictions... (%s)" % name)
 
-for part, pred in [('train', train_p), ('test-foldavg', test_foldavg_p), ('test-fulltrain', test_fulltrain_p)]:
+for part, pred in [('train1', train_p), ('va1l-foldavg', test_foldavg_p), ('val1-fulltrain', test_fulltrain_p)]:
     pred.rename('click_mode', inplace=True)
     pred.index.rename('sid', inplace=True)
-    pred.to_csv('preds/%s-%s.csv' % (name, part), header=True)
+    pred.to_csv('val1/%s-%s.csv' % (name, part), header=True)
 
 #copy current file
 # copy2(os.path.realpath(__file__), os.path.join("preds", "%s-code.py" % name))

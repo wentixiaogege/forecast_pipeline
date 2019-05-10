@@ -1,102 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54a17ddd-9f16-4185-9fd2-699a8bf91ac8" name="Default" comment="prepare basic">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/AutoML3_ingestion_program.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/AutoML3_sample_code_submission.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/AutoML3_sample_data.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/AutoML3_sample_ref.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/AutoML3_scoring_program.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NIPS-2018-AutoML-Challenge-master/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NIPS-2018-AutoML-Challenge-master/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/allstate/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/allstate/prepare-basic.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/allstate/prepare-categorical-dummy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/allstate/prepare-categorical-encoded.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/allstate/train.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/automl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/boosting.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/src/preprocess.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_k/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/ingestion.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/public_key.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/CONSTANT.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/automl.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/merge.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/preprocess.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/test/main_test.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/info.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/main_train.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/main_train.solution" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/table_1.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/table_2.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/K/train/table_3.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/test/main_test.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/info.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/main_train.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/main_train.solution" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/table_1.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/table_2.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data/L/train/table_3.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_ref/K/main_test.solution" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_ref/L/main_test.solution" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/scoring_program/metadata" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/scoring_program/score.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/baseline/gbdt.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-counts.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-numeric-scaled.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/run.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/regression/deep_model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/regression/meta_model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/models/regression/traditional_model.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/forecast_pipeline.zip" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/average.py" afterPath="$PROJECT_DIR$/src/allstate/average.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/keras_util.py" afterPath="$PROJECT_DIR$/src/allstate/keras_util.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-basic.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-categorical-counts.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-categorical-counts.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-categorical-dummy.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-dummy.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-categorical-encoded.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-encoded.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-cluster-rbf.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-cluster-rbf.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-manual.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-manual.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-boxcox.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-boxcox.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-combinations.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-combinations.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-edges.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-edges.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-lin.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-lin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-rank-norm.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-rank-norm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-scaled.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-scaled.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-numeric-unskew.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-numeric-unskew.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/prepare-svd.py" afterPath="$PROJECT_DIR$/src/allstate/prepare-svd.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/print-bucket-mae.py" afterPath="$PROJECT_DIR$/src/allstate/print-bucket-mae.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/print-power-correction.py" afterPath="$PROJECT_DIR$/src/allstate/print-power-correction.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/print-qr-correction.py" afterPath="$PROJECT_DIR$/src/allstate/print-qr-correction.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/run.sh" afterPath="$PROJECT_DIR$/src/allstate/run.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/train.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/utils.py" afterPath="$PROJECT_DIR$/src/allstate/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/forecast_pipeline.iml" afterPath="$PROJECT_DIR$/.idea/forecast_pipeline.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="54a17ddd-9f16-4185-9fd2-699a8bf91ac8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features_sqw.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/train1.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/conf.py" afterPath="$PROJECT_DIR$/src/conf/conf.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/deep_model.py" afterPath="$PROJECT_DIR$/src/models/deep_model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/meta_model.py" afterPath="$PROJECT_DIR$/src/models/meta_model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/traditional_model.py" afterPath="$PROJECT_DIR$/src/models/traditional_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" afterPath="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/automl.py" afterPath="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/automl.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/README.md" afterPath="$PROJECT_DIR$/src/kdd2019_regular/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/run.sh" afterPath="$PROJECT_DIR$/src/kdd2019_regular/run.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/train.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,8 +27,9 @@
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic__1_.coverage" NAME="prepare-basic (1) Coverage Results" MODIFIED="1550639185831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_svd.coverage" NAME="prepare-svd Coverage Results" MODIFIED="1550754235369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$conf__1_.coverage" NAME="conf (1) Coverage Results" MODIFIED="1556434363159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular/conf" />
-    <SUITE FILE_PATH="coverage/forecast_pipeline$train.coverage" NAME="train Coverage Results" MODIFIED="1557279264893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$train.coverage" NAME="train Coverage Results" MODIFIED="1557465107971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_unskew.coverage" NAME="prepare-numeric-unskew Coverage Results" MODIFIED="1550754095056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$train1.coverage" NAME="train1 Coverage Results" MODIFIED="1557413497056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$keras_util.coverage" NAME="keras_util Coverage Results" MODIFIED="1550752744095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$util.coverage" NAME="util Coverage Results" MODIFIED="1550826771148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$deep_model.coverage" NAME="deep_model Coverage Results" MODIFIED="1556433777012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
@@ -121,13 +37,13 @@
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_cluster_rbf.coverage" NAME="prepare-cluster-rbf Coverage Results" MODIFIED="1556372840286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/allstate" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$conf.coverage" NAME="conf Coverage Results" MODIFIED="1551324809890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/conf" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$gbdt.coverage" NAME="gbdt Coverage Results" MODIFIED="1557123240671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular/baseline" />
-    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_dummy.coverage" NAME="prepare-categorical-dummy Coverage Results" MODIFIED="1557126989461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_dummy.coverage" NAME="prepare-categorical-dummy Coverage Results" MODIFIED="1557413267814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$traditional_model.coverage" NAME="traditional_model Coverage Results" MODIFIED="1551329074105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_rank_norm.coverage" NAME="prepare-numeric-rank-norm Coverage Results" MODIFIED="1550754100498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_boxcox.coverage" NAME="prepare-numeric-boxcox Coverage Results" MODIFIED="1550754082803" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_categorical_counts.coverage" NAME="prepare-categorical-counts Coverage Results" MODIFIED="1557126985757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
-    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic.coverage" NAME="prepare-basic Coverage Results" MODIFIED="1557126670220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_scaled.coverage" NAME="prepare-numeric-scaled Coverage Results" MODIFIED="1557155687425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic.coverage" NAME="prepare-basic Coverage Results" MODIFIED="1557413437022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$meta_model.coverage" NAME="meta_model Coverage Results" MODIFIED="1556437279391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/models" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -139,50 +55,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="prepare-basic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3429">
+              <caret line="255" column="66" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
+              <folding>
+                <marker date="1557413434919" expanded="false" signature="24:232" ph="import ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conf_kdd_regular.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="619" column="15" selection-start-line="619" selection-start-column="15" selection-end-line="619" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="train1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2895">
+              <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+              <folding>
+                <element signature="e#1263#1561#0" expanded="false" />
+                <element signature="e#1608#1846#0" expanded="false" />
+                <element signature="e#10575#12897#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="254" column="24" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
+            <state relative-caret-position="330">
+              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
               <folding>
-                <element signature="e#692#1223#0" expanded="false" />
                 <element signature="e#1263#1561#0" expanded="false" />
                 <element signature="e#1608#1846#0" expanded="false" />
-                <element signature="e#4100#5079#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="conf_kdd_regular.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="985">
-              <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-              <folding>
-                <element signature="e#2193#2196#0" expanded="false" />
-                <element signature="e#2214#2217#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/run.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -236,10 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/model.py" />
-        <option value="$PROJECT_DIR$/train.py" />
-        <option value="$PROJECT_DIR$/src/model.py" />
-        <option value="$PROJECT_DIR$/src/models/model.py" />
         <option value="$PROJECT_DIR$/src/models/keras_util.py" />
         <option value="$PROJECT_DIR$/src/util.py" />
         <option value="$PROJECT_DIR$/src/utils.py" />
@@ -266,27 +179,31 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/prepare-svd.py" />
         <option value="$PROJECT_DIR$/src/run.sh" />
-        <option value="$PROJECT_DIR$/src/kdd2019_regular/README.md" />
         <option value="$PROJECT_DIR$/src/allstate/prepare-cluster-rbf.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/utils.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/conf/conf.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190502-2156/pred_out.txt" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-counts.py" />
-        <option value="$PROJECT_DIR$/src/kdd2019_regular/run.sh" />
         <option value="/Library/Python/2.7/site-packages/pylightgbm/models.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-encoded.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/baseline/gbdt.py" />
-        <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/ingestion.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-2107/model.libfm_softmax" />
         <option value="$PROJECT_DIR$/src/models/deep_model.py" />
         <option value="$PROJECT_DIR$/src/conf/conf.py" />
         <option value="$PROJECT_DIR$/src/models/meta_model.py" />
         <option value="$PROJECT_DIR$/src/models/traditional_model.py" />
-        <option value="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
-        <option value="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/logs/logs" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/README.md" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features_sqw.py" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/run.sh" />
+        <option value="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/automl.py" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/train1.py" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" />
+        <option value="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
       </list>
     </option>
   </component>
@@ -300,7 +217,7 @@
     <option name="x" value="1" />
     <option name="y" value="23" />
     <option name="width" value="1439" />
-    <option name="height" value="806" />
+    <option name="height" value="807" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -328,7 +245,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,8 +277,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forecast_pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forecast_pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="input" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -374,19 +305,19 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/conf" />
-      <recent name="$PROJECT_DIR$/src/kdd2019_regular" />
-      <recent name="$PROJECT_DIR$/src/kdd2019_automl" />
-      <recent name="$PROJECT_DIR$/input" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_data" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/allstate" />
       <recent name="$PROJECT_DIR$/input/kdd2019_regular/phase1" />
       <recent name="$PROJECT_DIR$/input/allstate" />
-      <recent name="C:\Users\lijingjie1\PycharmProjects\forecast_pipeline\src\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kdd2019_regular" />
+      <recent name="$PROJECT_DIR$/input/kdd2019_regular/phase1" />
+      <recent name="$PROJECT_DIR$/src/kdd2019_regular/baseline" />
+      <recent name="$PROJECT_DIR$/src/conf" />
+      <recent name="$PROJECT_DIR$/src/kdd2019_automl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -420,7 +351,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="prepare-categorical-counts" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="prepare-numeric-scaled" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -433,7 +364,43 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="forecast_pipeline" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-counts.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/prepare-numeric-scaled.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="prepare-basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/kdd2019_regular" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="train1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/kdd2019_regular" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="forecast_pipeline" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/train1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -452,42 +419,6 @@
       <module name="forecast_pipeline" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-dummy.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ingestion" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="forecast_pipeline" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/ingestion.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="prepare-numeric-scaled" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/kdd2019_regular" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="forecast_pipeline" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/kdd2019_regular/prepare-numeric-scaled.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -702,18 +633,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.train" />
-      <item index="1" class="java.lang.String" itemvalue="Python.prepare-categorical-counts" />
-      <item index="2" class="java.lang.String" itemvalue="Python.prepare-categorical-dummy" />
-      <item index="3" class="java.lang.String" itemvalue="Python.ingestion" />
-      <item index="4" class="java.lang.String" itemvalue="Python.prepare-numeric-scaled" />
+      <item index="1" class="java.lang.String" itemvalue="Python.prepare-numeric-scaled" />
+      <item index="2" class="java.lang.String" itemvalue="Python.prepare-basic" />
+      <item index="3" class="java.lang.String" itemvalue="Python.train1" />
+      <item index="4" class="java.lang.String" itemvalue="Python.prepare-categorical-dummy" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.train" />
-        <item index="1" class="java.lang.String" itemvalue="Python.prepare-numeric-scaled" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ingestion" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train1" />
+        <item index="2" class="java.lang.String" itemvalue="Python.prepare-basic" />
         <item index="3" class="java.lang.String" itemvalue="Python.prepare-categorical-dummy" />
-        <item index="4" class="java.lang.String" itemvalue="Python.prepare-categorical-counts" />
+        <item index="4" class="java.lang.String" itemvalue="Python.prepare-numeric-scaled" />
       </list>
     </recent_temporary>
   </component>
@@ -738,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556120938640</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prepare basic">
+      <created>1557282542618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557282542618</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -751,27 +689,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1439" height="806" extended-state="0" />
+    <frame x="1" y="23" width="1439" height="807" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25626343" sideWeight="0.4922049" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26628488" sideWeight="0.4922049" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44117647" sideWeight="0.50536865" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4579832" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29691878" sideWeight="0.49463135" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33146852" sideWeight="0.49463135" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28561202" sideWeight="0.5077951" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44117647" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51888114" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -803,6 +741,24 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sh" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -869,9 +825,19 @@
           <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/kdd2019_regular/train.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="72" />
+          <url>file://$PROJECT_DIR$/src/kdd2019_regular/train1.py</url>
+          <line>151</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py</url>
+          <line>220</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-dummy.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -881,397 +847,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-encoded.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-counts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-dummy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/logs/lgb-tst.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/preds/20190506-1648-lgb-tst1-0.67593-test-foldavg.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="94358" column="9" selection-start-line="94358" selection-start-column="9" selection-end-line="94358" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/baseline/submit/lgb_result_2019-05-06-06-55-21.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1415017">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="238" column="36" selection-start-line="238" selection-start-column="36" selection-end-line="238" selection-end-column="36" />
-          <folding>
-            <element signature="e#262#570#0" expanded="false" />
-            <element signature="e#604#1061#0" expanded="false" />
-            <element signature="e#1090#1426#0" expanded="false" />
-            <element signature="e#1457#6553#0" expanded="false" />
-            <element signature="e#6826#7971#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/kdd2019_regular/phase1/train.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/metadata">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/KDD Cup 2019/data_public.md5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/xgboost/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="1114" column="0" selection-start-line="1114" selection-start-column="0" selection-end-line="1114" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_k/metadata">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_ref/K/main_test.solution">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/scoring_program/score.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/ingestion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/preprocess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-1846/out.txt">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-1856/train.svm">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-1856/out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-1856/model.libfm_softmax">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-2048/model.libfm_softmax">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-703">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190506-2107/model.libfm_softmax">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="55" column="457" selection-start-line="55" selection-start-column="457" selection-end-line="55" selection-end-column="457" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/keras/legacy/interfaces.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/tensorflow/python/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="1303" column="6" selection-start-line="1303" selection-start-column="6" selection-end-line="1303" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/keras/callbacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="175" column="13" selection-start-line="175" selection-start-column="13" selection-end-line="175" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/keras/metrics.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="450" column="0" selection-start-line="450" selection-start-column="0" selection-end-line="450" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/nltk/sem/glue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="115" column="8" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-numeric-scaled.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/allstate/prepare-numeric-scaled.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/deep_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="947">
-          <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
-          <folding>
-            <element signature="e#5133#5402#0" expanded="false" />
-            <element signature="e#5440#5601#0" expanded="false" />
-            <element signature="e#6354#7017#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/conf/conf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11601">
-          <caret line="883" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="1555" selection-end-column="0" />
-          <folding>
-            <element signature="e#4553#6829#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sklearn/utils/metaestimators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sklearn/linear_model/ridge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="653" column="8" selection-start-line="653" selection-start-column="8" selection-end-line="653" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/meta_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#522#1784#0" expanded="false" />
-            <element signature="e#1829#4969#0" expanded="false" />
-            <element signature="e#5017#11120#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/sklearn/linear_model/logistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="1179" column="58" selection-start-line="1179" selection-start-column="33" selection-end-line="1179" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/xgboost/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="152" column="46" selection-start-line="152" selection-start-column="35" selection-end-line="152" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190507-2105/out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190507-2105/pred.svm">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190507-2105/pred_out.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/libfm_models/20190507-2105/eval.svm">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state />
@@ -1281,59 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/traditional_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="465" column="0" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
-          <folding>
-            <element signature="e#956#1101#0" expanded="false" />
-            <element signature="e#3448#4520#0" expanded="false" />
-            <element signature="e#4577#4796#0" expanded="false" />
-            <element signature="e#4845#5071#0" expanded="false" />
-            <element signature="e#5112#8720#0" expanded="false" />
-            <element signature="e#7622#8720#0" expanded="false" />
-            <element signature="e#8753#9565#0" expanded="false" />
-            <element signature="e#9595#12087#0" expanded="false" />
-            <element signature="e#15876#17704#0" expanded="false" />
-            <element signature="e#16588#17704#0" expanded="false" />
-            <element signature="e#17745#18020#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="254" column="24" selection-start-line="254" selection-start-column="24" selection-end-line="254" selection-end-column="24" />
-          <folding>
-            <element signature="e#692#1223#0" expanded="false" />
-            <element signature="e#1263#1561#0" expanded="false" />
-            <element signature="e#1608#1846#0" expanded="false" />
-            <element signature="e#4100#5079#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="985">
-          <caret line="76" column="18" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-          <folding>
-            <element signature="e#2193#2196#0" expanded="false" />
-            <element signature="e#2214#2217#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,6 +868,429 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/logs/logs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12604" column="5" selection-start-line="12604" selection-start-column="0" selection-end-line="12604" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/preds/20190508-1149-libfm-softmax-tst-0.51460-test-fulltrain.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/deep_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="196" column="33" selection-start-line="196" selection-start-column="33" selection-end-line="196" selection-end-column="33" />
+          <folding>
+            <element signature="e#5133#5402#0" expanded="false" />
+            <element signature="e#5440#5601#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="84">
+            <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/kdd2019_regular/phase1/weather_every3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/kdd2019_regular/phase1/train.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/metadata">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_ref/L/main_test.solution">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program/ingestion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1472">
+          <caret line="111" column="17" selection-start-line="111" selection-start-column="17" selection-end-line="111" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/scoring_program/score.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/scoring_program/metadata">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_ref/K/main_test.solution">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_scoring_output/scores.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/nohup.out">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="75">
+            <caret line="38" column="66" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="221" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/metadata">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/dateutil/rrule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="828" column="21" selection-start-line="828" selection-start-column="21" selection-end-line="828" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/preprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/CONSTANT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1466">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/automl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="26" column="30" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-998">
+          <caret line="230" column="84" selection-start-line="230" selection-start-column="84" selection-end-line="230" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pandas/core/internals/construction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="423" column="0" selection-start-line="423" selection-start-column="0" selection-end-line="423" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="5065" column="0" selection-start-line="5065" selection-start-column="0" selection-end-line="5065" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pandas/core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1661" column="0" selection-start-line="1661" selection-start-column="0" selection-end-line="1661" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="2163" column="0" selection-start-line="2163" selection-start-column="0" selection-end-line="2163" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/pandas/core/indexes/multi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="1823" column="8" selection-start-line="1823" selection-start-column="8" selection-end-line="1823" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/automl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/sample_code_submission/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_automl/src/boosting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-95">
+          <caret line="93" column="31" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/traditional_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="207" column="0" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+          <folding>
+            <element signature="e#956#1101#0" expanded="false" />
+            <element signature="e#3448#4520#0" expanded="false" />
+            <element signature="e#4577#4796#0" expanded="false" />
+            <element signature="e#4845#5071#0" expanded="false" />
+            <element signature="e#7622#8720#0" expanded="false" />
+            <element signature="e#8753#9565#0" expanded="false" />
+            <element signature="e#15876#17704#0" expanded="false" />
+            <element signature="e#16588#17704#0" expanded="false" />
+            <element signature="e#17745#18020#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/val1/20190509-1015-lgb-tst1-0.67435-test-foldavg.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/sklearn/metrics/classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="619" column="4" selection-start-line="619" selection-start-column="4" selection-end-line="619" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/val1/20190509-2054-lgb-tst1-0.67435-val1-foldavg.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-counts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-categorical-dummy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2895">
+          <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding>
+            <element signature="e#1263#1561#0" expanded="false" />
+            <element signature="e#1608#1846#0" expanded="false" />
+            <element signature="e#10575#12897#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/baseline/gen_features_sqw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
+          <folding>
+            <element signature="e#1263#1561#0" expanded="false" />
+            <element signature="e#1608#1846#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3429">
+          <caret line="255" column="66" selection-start-line="255" selection-start-column="66" selection-end-line="255" selection-end-column="66" />
+          <folding>
+            <marker date="1557413434919" expanded="false" signature="24:232" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="619" column="15" selection-start-line="619" selection-start-column="15" selection-end-line="619" selection-end-column="15" />
           <folding />
         </state>
       </provider>

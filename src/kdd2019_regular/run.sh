@@ -15,11 +15,11 @@ train() {
 # Prepare features
 #prepare basic
 #prepare numeric-boxcox
-#prepare numeric-scaled
+prepare numeric-scaled
 #prepare numeric-rank-norm
-#prepare categorical-encoded
-#prepare categorical-counts
-#prepare categorical-dummy
+prepare categorical-encoded
+prepare categorical-counts
+prepare categorical-dummy
 #prepare svd
 
 # Basic models
@@ -39,7 +39,7 @@ train() {
 #train libfm-svd
 
 # LightGBM
-train lgb-tst
+#train lgb-tst
 
 # XGB
 #train xgb-ce

@@ -35,7 +35,7 @@ def train_lightgbm(X: pd.DataFrame, y: pd.Series, config: Config):
         "objective": "binary",
         "metric": "auc",
         "verbosity": -1,
-        "seed": 1,
+        "seed": 2019,
         "num_threads": 4
     }
 
@@ -48,9 +48,9 @@ def train_lightgbm(X: pd.DataFrame, y: pd.Series, config: Config):
 
     config["model"] = lgb.train({**params, **hyperparams},
                                 train_data,
-                                500,
+                                10000,
                                 valid_data,
-                                early_stopping_rounds=30,
+                                early_stopping_rounds=50,
                                 verbose_eval=100)
 
 
@@ -61,25 +61,24 @@ def predict_lightgbm(X: pd.DataFrame, config: Config) -> List:
 
 @timeit
 def hyperopt_lightgbm(X: pd.DataFrame, y: pd.Series, params: Dict, config: Config):
-    X_train, X_val, y_train, y_val = data_split(X, y, test_size=0.5)
+    X_train, X_val, y_train, y_val = data_split(X, y, test_size=0.2)
     train_data = lgb.Dataset(X_train, label=y_train)
     valid_data = lgb.Dataset(X_val, label=y_val)
 
     space = {
         "learning_rate": hp.loguniform("learning_rate", np.log(0.01), np.log(0.5)),
-        "max_depth": hp.choice("max_depth", [-1, 2, 3, 4, 5, 6]),
-        "num_leaves": hp.choice("num_leaves", np.linspace(10, 200, 50, dtype=int)),
+        "max_depth": hp.choice("max_depth", [-1,5,7,11,15,31]),
+        "num_leaves": hp.choice("num_leaves", np.linspace(8, 64, 2, dtype=int)),
         "feature_fraction": hp.quniform("feature_fraction", 0.5, 1.0, 0.1),
-        "bagging_fraction": hp.quniform("bagging_fraction", 0.5, 1.0, 0.1),
-        "bagging_freq": hp.choice("bagging_freq", np.linspace(0, 50, 10, dtype=int)),
-        "reg_alpha": hp.uniform("reg_alpha", 0, 2),
-        "reg_lambda": hp.uniform("reg_lambda", 0, 2),
-        "min_child_weight": hp.uniform('min_child_weight', 0.5, 10),
+        "colsample_bytree":hp.uniform("colsample_bytree", 0.5, 1.0),
+        "reg_alpha":hp.uniform("reg_alpha", 0.0, 2.0),
+        "reg_lambda":hp.uniform("reg_lambda", 0.0, 2.0),
+        "min_child_weight":hp.quniform('min_child_weight', 0, 500, 10),
     }
 
     def objective(hyperparams):
-        model = lgb.train({**params, **hyperparams}, train_data, 300,
-                          valid_data, early_stopping_rounds=30, verbose_eval=0)
+        model = lgb.train({**params, **hyperparams}, train_data, 1000,
+                          valid_data, early_stopping_rounds=50, verbose_eval=0)
 
         score = model.best_score["valid_0"][params["metric"]]
 

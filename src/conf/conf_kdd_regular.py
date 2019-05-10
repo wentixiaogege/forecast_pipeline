@@ -539,23 +539,6 @@ presets = {
         }, n_iter=500, fair=1),
     },
 
-    'lgb-tst': {
-        'features': ['numeric','categorical'],
-        'n_bags': 1,
-        'model': LightGBM({
-            'num_iterations': 5000,
-            'learning_rate': 0.05,
-            'num_leaves': 31,
-            'min_data_in_leaf': 30,
-            'feature_fraction': 0.2,
-            'bagging_fraction': 0.3,
-            'bagging_freq': 20,
-            'metric_freq': 10,
-            'metric': 'multi_logloss',
-            'num_class':12,
-            'application':'multiclass'
-        }),
-    },
     'lgb-tst1': {
         'features': ['numeric','categorical','svd'],
         'n_bags': 1,
@@ -575,57 +558,40 @@ presets = {
     },
     'lgb-cd-1': {
         'features': ['numeric', 'categorical_dummy'],
-        'y_transform': y_norm,
-        'n_bags': 4,
-        'model': LightGBM({
-            'num_iterations': 2150,
+        'n_bags': 2,
+        'model': Official_LightGBM({
+            'objective': 'multiclass',
+            'metrics': 'multiclass',
+            'num_class': 12,
             'learning_rate': 0.01,
-            'num_leaves': 200,
+            'num_leaves': 400,
             'min_data_in_leaf': 8,
             'feature_fraction': 0.3,
             'bagging_fraction': 0.8,
             'bagging_freq': 20,
             'metric_freq': 10
-        }),
+        }, n_iter=1000),
     },
 
     'lgb-cd-2': {
         'features': ['numeric', 'categorical_dummy'],
-        'y_transform': y_log_ofs(200),
         'n_bags': 4,
-        'model': LightGBM({
-            'num_iterations': 2900,
+        'model': Official_LightGBM({
+            'objective': 'multiclass',
+            'metrics': 'multiclass',
             'learning_rate': 0.01,
-            'num_leaves': 200,
+            'num_class': 12,
+            'num_leaves': 400,
             'min_data_in_leaf': 8,
             'feature_fraction': 0.3,
             'bagging_fraction': 0.8,
             'bagging_freq': 20,
             'metric_freq': 10
-        }),
+        }, n_iter=800),
     },
-
-    'lgb-cd-tst': {
-        'features': ['numeric', 'categorical_dummy'],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 2,
-        'model': LightGBM({
-            'num_iterations': 5000,
-            'learning_rate': 0.01,
-            'num_leaves': 200,
-            'min_data_in_leaf': 8,
-            'feature_fraction': 0.3,
-            'bagging_fraction': 0.8,
-            'bagging_freq': 20,
-            'metric_freq': 10,
-            'metric': 'l1',
-        }),
-    },
-
     'lgb-cm-tst': {
         'features': ['numeric'],
         'feature_builders': [CategoricalMeanEncoded(C=10000, noisy=True, noise_std=0.1, loo=False)],
-        'y_transform': y_log_ofs(200),
         #'n_bags': 2,
         'model': LightGBM({
             'num_iterations': 4000,
@@ -685,7 +651,7 @@ presets = {
     'libfm-softmax-tst': {
         'features': ['numeric','categorical','svd'],
         'model': LibFM_softmax(params={
-        },n_iter=1),
+        },n_iter=3),
     },
 
     'nn-tst': {
@@ -983,15 +949,13 @@ presets = {
 
     'knn2': {
         'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_log_ofs(200),
         'model': Sklearn(Pipeline([('sc', StandardScaler()), ('est', KNeighborsClassifier(20, n_jobs=-1))])),
         'sample': 0.2,
         'n_bags': 4,
     },
 
     'knn3': {
-        'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_log_ofs(200),
+        'features': ['numeric', 'categorical_encoded','svd'],
         'model': Sklearn(Pipeline([('sc', StandardScaler()), ('est', KNeighborsClassifier(30, n_jobs=-1))])),
         'sample': 0.3,
         'n_bags': 4,
@@ -999,7 +963,6 @@ presets = {
 
     'knn4-tst': {
         'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_log_ofs(200),
         'model': Sklearn(Pipeline([('sc', StandardScaler()), ('est', KNeighborsClassifier(20, n_jobs=-1))])),
         'sample': 0.2,
         'feature_sample': 0.5,
@@ -1009,7 +972,6 @@ presets = {
 
     'svr1': {
         'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_log_ofs(200),
         'model': Sklearn(Pipeline([('sc', StandardScaler()), ('est', SVC())])),
         'sample': 0.05,
         'n_bags': 8,
