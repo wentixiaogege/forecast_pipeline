@@ -87,14 +87,15 @@ n_classes=12
 # set_train = 'knn3'
 # set_train = 'xgb-tst'
 # set_train='lr-cd'
+# set_train='lgb-tst1'
 # set_train='lgb-cd-1'
-set_train='lgb-tst1'
+# set_train='lgb-tst1'
 # set_train='lgb-cd-2'
 # set_train='libfm-softmax-tst'
 # set_train='gb-tst'
 # set_train='nn-tst'
 # set_train='nn-cd'
-# set_train='nn-cd-2'
+set_train='nn-cd-2'
 # set_train = args.preset
 
 print("Preset: %s" % set_train)
@@ -159,12 +160,17 @@ if 'powers' in preset:
 
 f1_scores = []
 #按照splits fold去训练
+
 for split in range(n_splits):
     print("Training split %d..." % split)
 
     # for fold, (fold_train_idx, fold_eval_idx) in enumerate(KFold(len(train_y), n_folds, shuffle=True, random_state=2018 + 17*split)):
-    print (n_folds)
+    skf = StratifiedKFold(n_splits=2, random_state=2019 + 17*split, shuffle=True)
+
+    # for fold, (fold_train_idx, fold_eval_idx) in enumerate(skf.split(train_x,train_y)):
+    #     print (n_folds)
     for fold,fold_idx in enumerate(KFold(n_folds, shuffle=True, random_state=2019 + 17 * split).split(train_y)):
+
 
         # if args.fold is not None and fold != args.fold:
         #     continue
@@ -335,18 +341,24 @@ if True:
 # Analyze predictions
 f1_scores_mean = np.mean(f1_scores)
 f1_scores_std = np.std(f1_scores)
-f1_score = f1_score(train_y, y_aggregator(y_inv_transform(train_p), axis=1).argmax(-1),average='weighted')
+f1_score1 = f1_score(train_y, y_aggregator(y_inv_transform(train_p), axis=1).argmax(-1),average='weighted')
 
 # Aggregate predictions
+name = "%s-%s-%.5f" % (datetime.datetime.now().strftime('%Y%m%d-%H%M'), set_train, f1_score1)
+test_foldavg_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_foldavg_p), axis=1), index=Dataset.load_part('test', 'sid'))
+test_foldavg_p_backup.to_csv('preds/%s-%s.csv' % (name, 'test_foldavg_p_backup'), header=True)
+test_fulltrain_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1), index=Dataset.load_part('test', 'sid'))
+test_foldavg_p_backup.to_csv('preds/%s-%s.csv' % (name, 'test_foldavg_p_backup'), header=True)
+
+
 train_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(train_p), axis=1),axis=1), index=Dataset.load_part('train', 'sid'))
 test_foldavg_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_foldavg_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
 test_fulltrain_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
 
 print('---------------------------------')
 print("CV f1_score: %.5f +- %.5f" % (f1_scores_mean, f1_scores_std))
-print("CV RES f1_score: %.5f" % f1_score)
+print("CV RES f1_score: %.5f" % f1_score1)
 
-name = "%s-%s-%.5f" % (datetime.datetime.now().strftime('%Y%m%d-%H%M'), set_train, f1_score)
 
 print('---------------------------------')
 print("Saving predictions... (%s)" % name)

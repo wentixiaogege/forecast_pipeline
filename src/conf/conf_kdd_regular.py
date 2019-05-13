@@ -109,7 +109,6 @@ presets = {
 
     'xgb-ce': {
         'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_norm,
         'n_bags': 2,
         'model': Xgb({
             'max_depth': 7,
@@ -123,7 +122,6 @@ presets = {
 
     'xgb-ce-2': {
         'features': ['numeric', 'categorical_encoded'],
-        'y_transform': y_log_ofs(200),
         'n_bags': 4,
         'model': Xgb({
             'max_depth': 12,
@@ -541,7 +539,7 @@ presets = {
 
     'lgb-tst1': {
         'features': ['numeric','categorical','svd'],
-        'n_bags': 1,
+        'n_bags': 2,
         'model': Official_LightGBM({
             'objective': 'multiclass',
             'metrics': 'multiclass',
@@ -655,7 +653,7 @@ presets = {
     },
 
     'nn-tst': {
-        'features': ['numeric','categorical','svd'],
+        'features': ['numeric_scaled','categorical','svd'],
         'model': Keras(nn_mlp, {'l1': 1e-3, 'l2': 1e-3, 'n_epoch': 40, 'batch_size': 128, 'layers': [300,100]}),
     },
 
@@ -665,22 +663,22 @@ presets = {
     },
 
     'nn-cd': {
-        'features': ['numeric_scaled', 'categorical_dummy'],
+        'features': ['numeric_scaled', 'categorical_dummy','svd'],
         'n_bags': 2,
         'model': Keras(nn_mlp, lambda: {'l1': 1e-5, 'l2': 1e-5, 'n_epoch': 80, 'batch_size': 128, 'layers': [400, 200], 'dropouts': [0.4, 0.2], 'optimizer': Adadelta(), 'callbacks': [ExponentialMovingAverage(save_mv_ave_model=False)]}, scale=False),
     },
 
     'nn-cd-2': {
-        'features': ['numeric_scaled', 'categorical_dummy'],
+        'features': ['numeric_scaled', 'categorical_dummy','svd'],
         'n_bags': 2,
-        'model': Keras(nn_mlp, lambda: {'l1': 2e-5, 'l2': 2e-5, 'n_epoch': 20, 'batch_size': 128, 'layers': [400, 200, 100], 'dropouts': [0.5, 0.4, 0.2], 'batch_norm': True, 'optimizer': Adadelta(), 'callbacks': [ExponentialMovingAverage(save_mv_ave_model=False)]}, scale=False),
+        'model': Keras(nn_mlp, lambda: {'l1': 2e-5, 'l2': 2e-5, 'n_epoch': 20, 'batch_size': 128, 'layers': [400, 200, 100], 'dropouts': [0.5, 0.4, 0.2], 'batch_norm': True, 'optimizer': Adadelta()}, scale=False),
     },
 
     'nn-cd-3': {
         'features': ['numeric_scaled', 'categorical_dummy'],
         'y_transform': y_log_ofs(200),
         'n_bags': 4,
-        'model': Keras(nn_mlp_2, lambda: {'n_epoch': 55, 'batch_size': 128, 'layers': [400, 200, 50], 'dropouts': [0.4, 0.25, 0.2], 'batch_norm': True, 'optimizer': Adadelta(), 'callbacks': [ExponentialMovingAverage(save_mv_ave_model=False)]}, scale=False),
+        'model': Keras(nn_mlp_2, lambda: {'n_epoch': 55, 'batch_size': 128, 'layers': [400, 200, 50], 'dropouts': [0.4, 0.25, 0.2], 'batch_norm': True, 'optimizer': Adadelta()}, scale=False),
     },
 
     'nn-cd-4': {

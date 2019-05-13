@@ -7,6 +7,9 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 # from tqdm import tqdm
 import json
+from geopy.distance import geodesic
+
+
 def read_profile_data():
     profile_data = pd.read_csv('../../input/kdd2019_regular/phase1/profiles.csv')
     profile_na = np.zeros(67)
@@ -33,8 +36,37 @@ def gen_od_feas(data):
     data['num_o2'] = data['o'].apply(lambda x: float(x.split(',')[1]))
     data['num_d1'] = data['d'].apply(lambda x: float(x.split(',')[0]))
     data['num_d2'] = data['d'].apply(lambda x: float(x.split(',')[1]))
-    data = data.drop(['o', 'd'], axis=1)
-    return data
+
+    locations = pd.read_csv('../../input/kdd2019_regular/phase1/lntlat_adress_6525.csv')
+    location_columns = ['adcode', 'district', 'lntlat', 'street', 'street_number']
+    locations = locations[location_columns]
+
+    data['cat_source_lntlat'] = data.o
+    data['cat_des_lntlat'] = data.d
+
+    locations.columns =map(lambda x: 'cat_source_'+x, location_columns)
+    merge = pd.merge(data, locations, on=['cat_source_lntlat'], how='inner')
+
+    locations.columns = map(lambda x: 'cat_des_'+x, location_columns)
+
+
+    merge = pd.merge(merge, locations, on=['cat_des_lntlat'], how='inner')
+
+    merge['cat_same_district'] = 1
+    merge['cat_same_street_number'] = 1
+    merge['cat_same_adcode'] = 1
+
+    merge.loc[merge['cat_source_district'] != merge['cat_des_district'], 'cat_same_district']=0
+    merge.loc[merge['cat_source_street_number'] != merge['cat_des_street_number'], 'cat_same_street_number'] = 0
+    merge.loc[merge['cat_source_adcode'] != merge['cat_des_adcode'], 'cat_same_adcode'] = 0
+    merge['num_direct_distance'] = merge.apply(lambda x: geodesic((x.num_o2, x.num_o1), (x.num_d2, x.num_d2)).m,axis=1)
+
+    #
+    from sklearn.preprocessing import LabelEncoder
+    merge[['cat_source_district', 'cat_des_district']] = merge[['cat_source_district', 'cat_des_district']].apply(LabelEncoder().fit_transform)
+
+    merge = merge.drop(['o', 'd','cat_source_lntlat','cat_des_lntlat','cat_source_street','cat_source_street_number','cat_des_street','cat_des_street_number'], axis=1)
+    return merge
 
 def gen_plan_feas(data):
     n = data.shape[0]
@@ -227,7 +259,7 @@ def split_train_val(data):
     val = pd.DataFrame(np.concatenate((y_val,X_val), axis=1),columns=data.columns)
     return train, val
 
-if False:
+if True:
     data = merge_raw_data()
     data = gen_od_feas(data)
     data = gen_profile_feas(data)
