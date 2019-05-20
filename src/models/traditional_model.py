@@ -163,6 +163,7 @@ class Official_LightGBM(BaseAlgo):
             self.params[k] = params[k]
 
         self.n_iter = n_iter
+        print ('ljj check lightgbm iters',self.n_iter)
         self.huber = huber
         self.fair = fair
         self.fair_decay = fair_decay
@@ -189,7 +190,8 @@ class Official_LightGBM(BaseAlgo):
 
         cate_featues = [i for i in feature_names if i.startswith('cat') ]
         print 'cate_features',cate_featues
-        dtrain = lgb.Dataset(X_train, y_train, feature_name=feature_names,categorical_feature=cate_featues)
+
+        dtrain = lgb.Dataset(X_train, y_train, feature_name=feature_names,categorical_feature=cate_featues,weight=[2 if i in [3,4,6,0] else 1 for i in y_train])
 
         if X_eval is None:
             watchlist = [dtrain]
@@ -205,7 +207,7 @@ class Official_LightGBM(BaseAlgo):
         else:
             n_iter = int(self.n_iter * size_mult)
 
-        self.model = lgb.train(params, dtrain,num_boost_round=n_iter,valid_sets=watchlist,valid_names=watchnames,feval=eval_func,early_stopping_rounds=100, verbose_eval=2)
+        self.model = lgb.train(params, dtrain,num_boost_round=4000,valid_sets=watchlist,valid_names=watchnames,feval=eval_func,early_stopping_rounds=50, verbose_eval=20)
         self.model.save_model(os.path.join(self.tmp_dir, 'lgb-%s.dump' % name))
         self.feature_names = feature_names
 

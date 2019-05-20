@@ -1,5 +1,4 @@
 cache
-preds
 lightgbm
 xgboost
 logs

@@ -51,9 +51,9 @@ def load_prediction(split, name, mode='fulltrain'):
         return sum(preds) / len(preds)
     else:
         if split == 'test' and os.path.exists('preds/%s-%s.csv' % (name, 'test-%s' % mode)):
-            return pd.read_csv('preds/%s-%s.csv' % (name, 'test-%s' % mode), index_col='id').iloc[:, 0]
+            return pd.read_csv('preds/%s-%s.csv' % (name, 'test-%s' % mode), index_col='sid').iloc[:, 0]
 
-        return pd.read_csv('preds/%s-%s.csv' % (name, split), index_col='id').iloc[:, 0]
+        return pd.read_csv('preds/%s-%s.csv' % (name, split), index_col='sid').iloc[:, 0]
 
 class Dataset(object):
 

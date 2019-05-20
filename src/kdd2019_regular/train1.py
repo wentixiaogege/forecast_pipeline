@@ -80,7 +80,7 @@ def eval_f(y_pred, train_data):
 # Xgb.default_params['nthread'] = args.threads
 # LightGBM.default_params['num_threads'] = args.threads
 Xgb.default_params['nthread'] = 4
-LightGBM.default_params['num_threads']=4
+LightGBM.default_params['num_threads']=12
 
 n_folds = 2
 n_classes=12
@@ -270,7 +270,7 @@ for split in range(n_splits):
         del fold_train_x, fold_train_y, fold_eval_x, fold_eval_y
 
 #全量去训练
-if False:
+if True:
     print("  Full...")
 
     full_train_x = train_x

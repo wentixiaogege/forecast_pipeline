@@ -9,7 +9,7 @@ sys.path.insert(0, './')
 sys.path.insert(0, 'conf/')
 import numpy as np
 import pandas as pd
-from allstate.utils import Dataset
+from kdd2019_regular.utils import Dataset
 from keras.callbacks import Callback
 from keras.models import load_model
 from keras import backend as K

@@ -72,8 +72,26 @@ def y_pow_ofs(p, ofs):
     return transform, inv_transform
 
 #for stage2 and stage3 outputs features
-l1_predictions = [
-]
+l1_predictions = ['20190506-1648-lgb-tst1-0.67593',
+ '20190508-1048-xgb-tst-0.67351',
+ '20190511-0015-nn-tst-0.60603',
+ '20190507-0033-nn-tst-0.63506',
+ '20190508-1149-libfm-softmax-tst-0.51460',
+ '20190511-0903-nn-cd-0.67161',
+ '20190507-1408-nn-cd-2-0.66078',
+ '20190508-1232-nn-cd-2-0.65845',
+ '20190511-1029-nn-cd-0.67181',
+ '20190507-1410-nn-cd-0.66619',
+ '20190508-1911-knn3-0.61330',
+ '20190512-1245-nn-cd-0.67146',
+ '20190507-1547-knn1-0.58927',
+ '20190509-1504-lgb-cd-2-0.66714',
+ '20190512-1530-lgb-tst1-0.68039',
+ '20190507-1750-lr-cd-0.62596',
+ '20190509-2132-lgb-cd-1-0.67040',
+ '20190512-1943-nn-cd-2-0.66881',
+ '20190508-0019-nn-tst-0.59753',
+ '20190510-1745-lgb-tst1-0.68019']
 l2_predictions = [
 ]
 #configure for stage1 stage2 stage3
@@ -300,184 +318,6 @@ presets = {
         }, n_iter=6500, fair=150, fair_decay=0.0003),
     },
 
-    'xgbf-ce-6': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_norm,
-        'n_bags': 1,
-        'model': Xgb({
-            'max_depth': 13,
-            'eta': 0.02,
-            'colsample_bytree': 0.4,
-            'subsample': 0.95,
-            'gamma': 0.6,
-            'alpha': 0.5,
-        }, n_iter=2, fair=1),
-    },
-
-    'xgbf-ce-7': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 13,
-            'eta': 0.02,
-            'colsample_bytree': 0.4,
-            'subsample': 0.95,
-            'gamma': 1.2,
-            'alpha': 1.0,
-        }, n_iter=5000, fair=1),
-    },
-
-    'xgbf-ce-8': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 13,
-            'eta': 0.01,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 1.15,
-            'alpha': 1.0,
-        }, n_iter=16000, fair=1),
-    },
-
-    'xgbf-ce-9': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.01,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 1.1,
-            'alpha': 0.95,
-        }, n_iter=16000, fair=1),
-    },
-
-    'xgbf-ce-10': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=itertools.combinations('cat80,cat87,cat57,cat12,cat79,cat10,cat7,cat89,cat2,cat72,cat81,cat11,cat1,cat13,cat9,cat3,cat16,cat90,cat23,cat36,cat73,cat103,cat40,cat28,cat111,cat6,cat76,cat50,cat5,cat4,cat14,cat38,cat24,cat82,cat25'.split(','), 2)
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 6,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.03,
-            'colsample_bytree': 0.7,
-            'subsample': 0.7,
-            'min_child_weight': 100
-        }, n_iter=720, fair=0.7),
-    },
-
-    'xgbf-ce-11': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.04,
-            'colsample_bytree': 0.2,
-            'subsample': 0.75,
-            'gamma': 2.0,
-            'alpha': 2.0,
-        }, n_iter=10000, fair=200),
-    },
-
-    'xgbf-ce-12': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_norm,
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 13,
-            'eta': 0.01,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 1.15,
-            'alpha': 1.0,
-        }, n_iter=16000, fair=1),
-    },
-
-    'xgbf-ce-13': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'y_transform': y_pow(0.25),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.007,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 2.2,
-            'alpha': 1.2,
-        }, n_iter=8000, fair=1),
-    },
-
-    'xgbf-ce-14': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat101', 'cat80'), ('cat79', 'cat80'), ('cat12', 'cat80'), ('cat101', 'cat81'), ('cat12', 'cat81'), ('cat12', 'cat79'), ('cat57', 'cat79'), ('cat1', 'cat80'), ('cat101', 'cat79'), ('cat1', 'cat81')]
-            )],
-        'y_transform': y_pow_ofs(0.202, 5),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.01,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 1.3,
-            'alpha': 0.6,
-        }, n_iter=8000, fair=2.0),
-    },
-
-    'xgbf-ce-15': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'y_transform': y_pow(0.24),
-        'n_bags': 6,
-        'model': Xgb({
-            'max_depth': 12,
-            'eta': 0.005,
-            'colsample_bytree': 0.2,
-            'subsample': 0.95,
-            'gamma': 2.2,
-            'alpha': 1.2,
-        }, n_iter=11000, fair=1),
-    },
-
     'xgbf-ce-clrbf-1': {
         'features': ['numeric', 'categorical_encoded', 'cluster_rbf_200'],
         #'n_bags': 3,
@@ -518,39 +358,20 @@ presets = {
         }, n_iter=1100, fair=1),
     },
 
-    'xgbf-cm-tst': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalMeanEncoded(
-                C=10000, noisy=True, noise_std=0.1, loo=False,
-                combinations=itertools.combinations('cat80,cat87,cat57,cat12,cat79,cat10,cat7,cat89,cat2,cat72,cat81,cat11,cat1,cat13,cat9,cat3,cat16,cat90,cat23,cat36,cat73,cat103,cat40,cat28,cat111,cat6,cat76,cat50,cat5,cat4,cat14,cat38,cat24,cat82,cat25'.split(','), 2)
-            )],
-        'y_transform': y_norm,
-        'n_bags': 2,
-        'model': Xgb({
-            'max_depth': 7,
-            'eta': 0.05,
-            'colsample_bytree': 0.4,
-            'subsample': 0.95,
-            'min_child_weight': 4,
-            'alpha': 0.0005,
-        }, n_iter=500, fair=1),
-    },
-
     'lgb-tst1': {
         'features': ['numeric','categorical','svd'],
-        'n_bags': 2,
+        'n_bags': 1,
         'model': Official_LightGBM({
             'objective': 'multiclass',
             'metrics': 'multiclass',
-            'learning_rate': 0.05,
-            'num_leaves': 31,
+            'learning_rate': 0.01,
+            'num_leaves': 40,
             'lambda_l1': 0.01,
-            'lambda_l2': 10,
+            'lambda_l2': 0.5,
             'num_class': 12,
             'seed': 2019,
-            'feature_fraction': 0.8,
-            'bagging_fraction': 0.8,
+            'feature_fraction': 0.5,
+            'bagging_fraction': 0.5,
             'bagging_freq': 4
         }, n_iter=1000),
     },
@@ -568,7 +389,7 @@ presets = {
             'bagging_fraction': 0.8,
             'bagging_freq': 20,
             'metric_freq': 10
-        }, n_iter=1000),
+        }, n_iter=600),
     },
 
     'lgb-cd-2': {
@@ -603,49 +424,6 @@ presets = {
         }),
     },
 
-    'lgb-ce-1': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 8,
-        'model': LightGBM({
-            'application': 'regression_fair',
-            'num_iterations': 9350,
-            'learning_rate': 0.003,
-            'num_leaves': 250,
-            'min_data_in_leaf': 2,
-            'feature_fraction': 0.25,
-            'bagging_fraction': 0.95,
-            'bagging_freq': 5,
-            'metric': 'l1',
-            'metric_freq': 40
-        }),
-    },
-
-    'lgb-ce-2': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_pow(0.25),
-        'n_bags': 4,
-        'model': LightGBM({
-            'application': 'regression_fair',
-            'num_iterations': 8000,
-            'learning_rate': 0.005,
-            'num_leaves': 250,
-            'min_data_in_leaf': 2,
-            'feature_fraction': 0.25,
-            'bagging_fraction': 0.95,
-            'bagging_freq': 5,
-            'metric': 'l1',
-            'metric_freq': 40
-        }),
-    },
     'libfm-softmax-tst': {
         'features': ['numeric','categorical','svd'],
         'model': LibFM_softmax(params={
@@ -653,8 +431,8 @@ presets = {
     },
 
     'nn-tst': {
-        'features': ['numeric_scaled','categorical','svd'],
-        'model': Keras(nn_mlp, {'l1': 1e-3, 'l2': 1e-3, 'n_epoch': 40, 'batch_size': 128, 'layers': [300,100]}),
+        'features': ['numeric_scaled','categorical_encoded','svd'],
+        'model': Keras(nn_mlp, {'l1': 1e-3, 'l2': 1e-3, 'n_epoch': 60, 'batch_size': 520, 'layers': [300,100]}),
     },
 
     'nn1': {
@@ -818,69 +596,10 @@ presets = {
         'model': Sklearn(ExtraTreesClassifier(50, max_features=0.8, min_samples_split=26, max_depth=23, n_jobs=-1)),
     },
 
-    'et-ce-4': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'model': Sklearn(ExtraTreesClassifier(400, max_features=0.623,  max_depth=29, min_samples_leaf=4, n_jobs=-1)),
-        'param_grid': {'min_samples_leaf': (2, 40), 'max_features': (0.05, 0.95), 'max_depth': (5, 40)},
-    },
-
-    'et-ce-5': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_pow(0.25),
-        'model': Sklearn(ExtraTreesClassifier(400, max_features=0.623,  max_depth=29, min_samples_leaf=4, n_jobs=-1)),
-        'param_grid': {'min_samples_leaf': (2, 40), 'max_features': (0.05, 0.95), 'max_depth': (5, 40)},
-    },
-
     'rf-ce-2': {
         'features': ['numeric', 'categorical_encoded'],
         'y_transform': y_log_ofs(200),
         'model': Sklearn(RandomForestClassifier(100, min_samples_split=16, max_features=0.3, max_depth=26, n_jobs=-1)),
-    },
-
-    'rf-ce-3': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'model': Sklearn(RandomForestClassifier(400, max_features=0.62, max_depth=39, min_samples_leaf=5, n_jobs=-1)),
-        'param_grid': {'min_samples_leaf': (2, 40), 'max_features': (0.05, 0.95), 'max_depth': (5, 40)},
-    },
-
-    'rf-ce-4': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_pow(0.25),
-        'model': Sklearn(RandomForestClassifier(400, max_features=0.62, max_depth=39, min_samples_leaf=5, n_jobs=-1)),
-        'param_grid': {'min_samples_leaf': (2, 40), 'max_features': (0.05, 0.95), 'max_depth': (5, 40)},
-    },
-
-    'rf-ce-rot-1': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13')]
-            )],
-        'y_transform': y_log_ofs(200),
-        'n_bags': 20,
-        'sample': 0.9,
-        'feature_sample': 0.9,
-        'svd': 50,
-        'model': Sklearn(RandomForestClassifier(30, max_features=0.7, max_depth=39, min_samples_leaf=5, n_jobs=-1)),
-        'param_grid': {'min_samples_leaf': (2, 40), 'max_features': (0.05, 0.95), 'max_depth': (5, 40)},
     },
 
     'lr-cd': {
@@ -893,16 +612,6 @@ presets = {
         'features': ['numeric_scaled', 'categorical_dummy'],
         'model': Sklearn(LogisticRegression(penalty='l1',multi_class='multinomial')),
         'param_grid': {'C': (1e-3, 1e3)},
-    },
-
-    'lr-cm': {
-        'features': ['numeric_scaled'],
-        'feature_builders': [
-            CategoricalMeanEncoded(
-                C=10000, noisy=True, noise_std=0.01, loo=True,
-                combinations=itertools.combinations('cat80,cat87,cat57,cat12,cat79,cat10,cat7,cat89,cat2,cat72,cat81,cat11,cat1,cat13,cat9,cat3,cat16,cat90,cat23,cat36,cat73,cat103,cat40,cat28,cat111,cat6,cat76,cat50,cat5,cat4,cat14,cat38,cat24,cat82,cat25'.split(','), 2)
-            )],
-        'model': Sklearn(LogisticRegression(penalty='l2',multi_class='multinomial')),
     },
 
     'lr-cd-nr': {
@@ -1040,23 +749,25 @@ presets = {
         'model': Sklearn(LogisticRegression(penalty='l2',multi_class='multinomial')),
     },
 
-    'l2-xgbf': {
+    'l2-lgbf': {
         'predictions': l1_predictions,
-        'y_transform': y_log_ofs(200),
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 4,
-            'eta': 0.0025,
-            'colsample_bytree': 0.4,
-            'subsample': 0.75,
-            'min_child_weight': 6,
-        }, n_iter=5000, fair=1.0),
+        'n_bags': 1,
+        'model': Official_LightGBM({
+            'objective': 'multiclass',
+            'metrics': 'multiclass',
+            'learning_rate': 0.005,
+            'num_leaves': 15,
+            'num_class': 12,
+            'seed': 2019,
+            'feature_fraction': 0.8,
+            'bagging_fraction': 0.8,
+            'bagging_freq': 4
+        }, n_iter=600),
         'param_grid': {'max_depth': (3, 7), 'min_child_weight': (1, 20), 'lambda': (0, 2.0), 'alpha': (0, 2.0), 'subsample': (0.5, 1.0)},
     },
 
     'l2-xgbf-2': {
         'predictions': l1_predictions,
-        'y_transform': y_log_ofs(200),
         'n_bags': 4,
         'model': Xgb({
             'max_depth': 3,
@@ -1131,46 +842,6 @@ presets = {
             'lambda': 1.5,
             'alpha': 1.3,
         }, n_iter=5000, fair=200),
-        'param_grid': {'max_depth': (3, 7), 'min_child_weight': (1, 20), 'lambda': (0, 2.0), 'alpha': (0, 2.0), 'subsample': (0.5, 1.0)},
-    },
-
-    'l2-xgbf-5': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'predictions': l1_predictions,
-        'n_bags': 7,
-        'model': Xgb({
-            'max_depth': 4,
-            'eta': 0.003,
-            'colsample_bytree': 0.4,
-            'subsample': 0.55,
-            'min_child_weight': 3,
-            'lambda': 3.0,
-            'alpha': 3.5,
-        }, n_iter=5000, fair=150),
-        'param_grid': {'max_depth': (3, 7), 'min_child_weight': (1, 20), 'lambda': (0, 2.0), 'alpha': (0, 2.0), 'subsample': (0.5, 1.0)},
-    },
-
-    'l2-xgbf-5-2': {
-        'features': ['numeric'],
-        'feature_builders': [
-            CategoricalAlphaEncoded(
-                combinations=[('cat103', 'cat111'), ('cat2', 'cat6'), ('cat87', 'cat11'), ('cat103', 'cat4'), ('cat80', 'cat103'), ('cat73', 'cat82'), ('cat12', 'cat72'), ('cat80', 'cat12'), ('cat111', 'cat5'), ('cat2', 'cat111'), ('cat80', 'cat57'), ('cat80', 'cat79'), ('cat1', 'cat82'), ('cat11', 'cat13'), ('cat79', 'cat81'), ('cat81', 'cat13'), ('cat9', 'cat73'), ('cat2', 'cat81'), ('cat80', 'cat111'), ('cat79', 'cat111'), ('cat72', 'cat1'), ('cat23', 'cat103'), ('cat89', 'cat13'), ('cat57', 'cat14'), ('cat80', 'cat81'), ('cat81', 'cat11'), ('cat9', 'cat103'), ('cat23', 'cat36')]
-            )],
-        'predictions': l1_predictions,
-        'n_bags': 4,
-        'model': Xgb({
-            'max_depth': 4,
-            'eta': 0.003,
-            'colsample_bytree': 0.6,
-            'subsample': 0.8,
-            'min_child_weight': 3,
-            'lambda': 3.0,
-            'alpha': 3.5,
-        }, n_iter=5000, fair=120),
         'param_grid': {'max_depth': (3, 7), 'min_child_weight': (1, 20), 'lambda': (0, 2.0), 'alpha': (0, 2.0), 'subsample': (0.5, 1.0)},
     },
 
