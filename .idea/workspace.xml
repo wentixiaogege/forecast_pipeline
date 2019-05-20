@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54a17ddd-9f16-4185-9fd2-699a8bf91ac8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/kdd2019_regular/visulize.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/kdd2019_regular/prepare-basic.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/conf.py" afterPath="$PROJECT_DIR$/src/conf/conf.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" afterPath="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/train.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/train1.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/train1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kdd2019_regular/utils.py" afterPath="$PROJECT_DIR$/src/kdd2019_regular/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/meta_model.py" afterPath="$PROJECT_DIR$/src/models/meta_model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/traditional_model.py" afterPath="$PROJECT_DIR$/src/models/traditional_model.py" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +27,7 @@
     <SUITE FILE_PATH="coverage/forecast_pipeline$post_process.coverage" NAME="post_process Coverage Results" MODIFIED="1557490287407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_rank_norm.coverage" NAME="prepare-numeric-rank-norm Coverage Results" MODIFIED="1550754100498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_numeric_scaled.coverage" NAME="prepare-numeric-scaled Coverage Results" MODIFIED="1557155687425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
-    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic.coverage" NAME="prepare_basic Coverage Results" MODIFIED="1558278692742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
+    <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_basic.coverage" NAME="prepare_basic Coverage Results" MODIFIED="1558313130207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$ingestion.coverage" NAME="ingestion Coverage Results" MODIFIED="1557138866703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_automl/starting_kit_0401/ingestion_program" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$prepare_queries.coverage" NAME="prepare_queries Coverage Results" MODIFIED="1557578129555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/kdd2019_regular" />
     <SUITE FILE_PATH="coverage/forecast_pipeline$model.coverage" NAME="model Coverage Results" MODIFIED="1550755633826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
@@ -63,8 +53,8 @@
       <file leaf-file-name="conf_kdd_regular.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="369" column="28" selection-start-line="369" selection-start-column="28" selection-end-line="369" selection-end-column="28" />
+            <state relative-caret-position="144">
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,23 +63,13 @@
       <file leaf-file-name="prepare_basic.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare_basic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-271">
-              <caret line="405" column="27" selection-start-line="405" selection-start-column="27" selection-end-line="405" selection-end-column="27" />
+            <state relative-caret-position="68">
+              <caret line="476" column="24" selection-start-line="476" selection-start-column="24" selection-end-line="476" selection-end-column="24" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
                 <element signature="e#8667#8706#0" expanded="false" />
-                <element signature="e#20105#20129#0" expanded="false" />
+                <element signature="e#20209#20233#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,8 +101,8 @@
       <file leaf-file-name="train.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+            <state relative-caret-position="378">
+              <caret line="154" column="16" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="16" />
               <folding>
                 <element signature="e#1608#1846#0" expanded="false" />
                 <element signature="e#4233#5212#0" expanded="false" />
@@ -280,10 +260,10 @@
         <option value="$PROJECT_DIR$/src/kdd2019_regular/check/general_review.ipynb" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/train1.py" />
         <option value="$PROJECT_DIR$/src/conf/conf_kdd_regular.py" />
-        <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare_basic.py" />
         <option value="$PROJECT_DIR$/src/models/traditional_model.py" />
         <option value="$PROJECT_DIR$/src/kdd2019_regular/train.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/kdd2019_regular/prepare_basic.py" />
       </list>
     </option>
   </component>
@@ -386,6 +366,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kdd2019_regular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forecast_pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="forecast_pipeline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="input" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -430,7 +428,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.prepare_basic">
     <configuration default="false" name="prepare-basic" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -738,8 +736,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.train" />
-        <item index="1" class="java.lang.String" itemvalue="Python.prepare_basic" />
+        <item index="0" class="java.lang.String" itemvalue="Python.prepare_basic" />
+        <item index="1" class="java.lang.String" itemvalue="Python.train" />
         <item index="2" class="java.lang.String" itemvalue="Python.train1" />
         <item index="3" class="java.lang.String" itemvalue="Python.visulize" />
         <item index="4" class="java.lang.String" itemvalue="Python.prepare-basic" />
@@ -788,7 +786,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557709338866</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new features">
+      <created>1558312299797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558312299797</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -804,13 +809,13 @@
     <frame x="1" y="23" width="1439" height="807" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21975662" sideWeight="0.4922049" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22333571" sideWeight="0.4922049" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5062937" sideWeight="0.50250536" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27552447" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3734266" sideWeight="0.49176806" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35664335" sideWeight="0.49176806" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3090909" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28561202" sideWeight="0.5077951" order="2" side_tool="true" content_ui="tabs" />
@@ -888,7 +893,8 @@
     <MESSAGE value="prepare basic" />
     <MESSAGE value="with validation set off" />
     <MESSAGE value="modify conf&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify conf&#10;" />
+    <MESSAGE value="new features" />
+    <option name="LAST_COMMIT_MESSAGE" value="new features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -991,11 +997,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/input/kdd2019_regular/phase1/profiles.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/allstate/prepare-cluster-rbf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-141">
@@ -1140,6 +1141,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,14 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="369" column="28" selection-start-line="369" selection-start-column="28" selection-end-line="369" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/traditional_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1350,17 +1344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding>
-            <element signature="e#1608#1846#0" expanded="false" />
-            <element signature="e#4233#5212#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/cache/numeric-test.npy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1377,14 +1360,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="154" column="16" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="16" />
+          <folding>
+            <element signature="e#1608#1846#0" expanded="false" />
+            <element signature="e#4233#5212#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/cache/click_mode-test.npy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/conf/conf_kdd_regular.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/kdd2019_regular/prepare_basic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-271">
-          <caret line="405" column="27" selection-start-line="405" selection-start-column="27" selection-end-line="405" selection-end-column="27" />
+        <state relative-caret-position="68">
+          <caret line="476" column="24" selection-start-line="476" selection-start-column="24" selection-end-line="476" selection-end-column="24" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
             <element signature="e#8667#8706#0" expanded="false" />
-            <element signature="e#20105#20129#0" expanded="false" />
+            <element signature="e#20209#20233#0" expanded="false" />
           </folding>
         </state>
       </provider>
