@@ -9,3 +9,6 @@ starting*
 *.csv
 input
 .idea
+.DS_Store
+*.zip
+*.data
