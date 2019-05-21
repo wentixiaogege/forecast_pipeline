@@ -12,3 +12,5 @@ input
 .DS_Store
 *.zip
 *.data
+val1
+*-train.csv
