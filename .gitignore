@@ -14,3 +14,5 @@ input
 *.data
 val1
 *-train.csv
+nohup.out
+*.pkl
