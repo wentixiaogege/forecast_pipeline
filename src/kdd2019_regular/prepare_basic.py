@@ -427,9 +427,9 @@ def gen_user_feas(data):
         return z
 
     mode_num_names = ['cat_mode_num_{}'.format(i) for i in range(12)]
-    pid_group_df = data['cat_last_click_mode'].apply(lambda x: mode_num(x)).reset_index()
+    pid_group_df = data['gen_pre_mode_list'].apply(lambda x: mode_num(x)).reset_index()
     mode_columns = ['sid'] + mode_num_names
-    mode_data = np.concatenate(pid_group_df['cat_last_click_mode'].values, axis=0).reshape(len(pid_group_df), 12)
+    mode_data = np.concatenate(pid_group_df['gen_pre_mode_list'].values, axis=0).reshape(len(pid_group_df), 12)
     sid_data = data['sid'].values.reshape(len(data), 1)
     mode_num_df = pd.DataFrame(np.hstack([sid_data, mode_data]), columns=mode_columns)
     mode_num_df.columns = mode_columns
@@ -446,7 +446,7 @@ def gen_user_feas(data):
         else:
             return c.idxmax()
 
-    data['cat_pid_max_mode'] = data['cat_last_click_mode'].apply(get_max_fre)
+    data['cat_pid_max_mode'] = data['gen_pre_mode_list'].apply(get_max_fre)
     return data
 
 def gen_time_feas(data):
