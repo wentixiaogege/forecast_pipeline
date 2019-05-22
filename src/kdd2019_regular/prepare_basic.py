@@ -25,7 +25,6 @@ def gen_profile_feas(data):
     profile_data = read_profile_data()
     print profile_data.head()
     x = profile_data.drop(['cat_pid'], axis=1).values
-    data.rename(columns={'pid':'cat_pid'},inplace=True)
     svd = TruncatedSVD(n_components=10, n_iter=30, random_state=2019)
     svd_x = svd.fit_transform(x)
     svd_feas = pd.DataFrame(svd_x)
@@ -35,6 +34,9 @@ def gen_profile_feas(data):
     data = data.merge(svd_feas, on='cat_pid', how='left')
     limit_profile_data = profile_data[['cat_pid','cat_p13','cat_p29','cat_p33','cat_p9','cat_p6','cat_p5','cat_p0']] # 这些feature对0类别应该会有好的效果
     data = data.merge(limit_profile_data, on='cat_pid', how='left') # ---> adding origin pid features
+    del profile_data
+    del limit_profile_data
+    del svd
     return data
 
 
@@ -382,34 +384,64 @@ def gen_plan_feas_origin(data):
 #     return feature_df
 
 def gen_user_feas(data):
-    pass
+
     data = data.sort_values(['cat_pid','req_time'])
     print data.head(),data.shape
-    data_user = []
-    for index, group in data.groupby('cat_pid'):
-        print index
-        group['cat_last_click_mode'] = group.click_mode.shift(1)
-        group['cat_last_click_mode'] = group['cat_last_click_mode'].fillna(0)
-        group['num_last_req_time'] = group.req_time.shift(1)
-        group['num_last_req_time'].fillna(100000)
-        group['num_how_long_till_this_time'] = group.req_time.astype(int) - group['num_last_req_time'].astype(int)
-        # group['num_hours_till_this_time'] = group.req_time - group['num_last_req_time']
 
-        group = group.reset_index(drop=True)
-        till_now_mode_clicks = np.zeros((group.shape[0], 12))
-        for i, row in group.iterrows():
-            # print i
-            last_time = group[group.req_time <= row['req_time']].cat_last_click_mode.value_counts()
-            for j, v in zip(last_time.index, last_time.values):
-                till_now_mode_clicks[i, int(j)] = v
+    def gen_pre_list(x,column):
+        le = x.size
+        pre_list = list(map(list, zip(*[x.shift(i).values for i in range(1, 1 + le)][::-1])))
+        ls = {column: pd.Series(pre_list)}
+        df = pd.DataFrame(ls, columns=[column])
+        df.index = x.index
+        return df
 
-        for i in range(11):
-            group['cat_p' + str(i) + '_till_now_mode_clicks'] = till_now_mode_clicks[:, i]
+    data['cat_last_click_mode'] = data.groupby('cat_pid')['click_mode'].apply(gen_pre_list,'cat_last_click_mode')
+    data['num_last_req_time'] = data.groupby('cat_pid')['req_time'].apply(gen_pre_list,'num_last_req_time')
+    data['num_last_req_time'] = data['num_last_req_time'].fillna(data.req_time.min())
+    print data.head()
+    data['num_how_long_till_this_time'] = data['req_time'].astype(int) - data['num_last_req_time'].astype(int)
 
-        data_user.append(group)
+    def mode_num(x):
+        """
+        :param c:
+        :return:
+        """
+        if x is np.nan:
+            return [0] * 12
+        if -1 in x:
+            x = x[0:x.index(-1)]
+        c = pd.value_counts(x)
+        z = np.zeros(12)
+        if len(c) > 0:
+            k = c.index.values.astype(np.int32)
+            v = c.values
+            z[k] = v
+            z = z / np.sum(z)
+        return z
 
-    return pd.concat(data_user)
+    mode_num_names = ['cat_mode_num_{}'.format(i) for i in range(12)]
+    pid_group_df = data['cat_last_click_mode'].apply(lambda x: mode_num(x)).reset_index()
+    mode_columns = ['sid'] + mode_num_names
+    mode_data = np.concatenate(pid_group_df['cat_last_click_mode'].values, axis=0).reshape(len(pid_group_df), 12)
+    sid_data = data['sid'].values.reshape(len(data), 1)
+    mode_num_df = pd.DataFrame(np.hstack([sid_data, mode_data]), columns=mode_columns)
+    mode_num_df.columns = mode_columns
+    data = pd.merge(data, mode_num_df, on=['sid'], how='left')
 
+    def get_max_fre(x):
+        if x is np.nan:
+            return np.nan
+        if -1 in x:
+            x = x[0:x.index(-1)]
+        c = pd.value_counts(x)
+        if len(c) == 0:
+            return np.nan
+        else:
+            return c.idxmax()
+
+    data['cat_pid_max_mode'] = data['cat_last_click_mode'].apply(get_max_fre)
+    return data
 
 def gen_time_feas(data):
     data['num_time_diff'] = data['plan_time'].astype(int) - data['req_time'].astype(int)
@@ -543,20 +575,19 @@ def split_train_val(data):
 if True:
     print 'merge_raw_Dataing '
     data = merge_raw_data()
-    print 'gen_od_feas '
-
-    data = gen_od_feas(data)
-    # plans_df = gen_plan_df(data)
-    # plans_df.to_csv('../../input/kdd2019_regular/phase1/plans_djsd.csv')
-    # plans_df =pd.read_csv('../../input/kdd2019_regular/phase1/plans_djsd.csv',index_col=0)
-    print 'gen_profile_feas '
-    data = gen_profile_feas(data)
-
+    data.rename(columns={'pid':'cat_pid'},inplace=True)
     data['req_time'] = pd.to_datetime(data['req_time'])
     data['plan_time'] = pd.to_datetime(data['plan_time'])
 
     print 'merge user feas'
     data = gen_user_feas(data)
+    data.to_csv('../../input/kdd2019_regular/phase1/data_user.csv',index=False)
+
+    print 'gen_od_feas '
+
+    data = gen_od_feas(data)
+    print 'gen_profile_feas '
+    data = gen_profile_feas(data)
 
     print 'gen_plan_feas '
     # plans_features = gen_plan_feas(data)
