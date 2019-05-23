@@ -7,8 +7,7 @@ sys.path.insert(0, 'src/conf/')
 sys.path.insert(0, '../conf/')
 sys.path.insert(0, '../models')
 sys.path.insert(0, '../')
-from sklearn.metrics import log_loss
-from sklearn.model_selection import KFold, StratifiedKFold,train_test_split
+from sklearn.model_selection import StratifiedKFold,train_test_split
 from conf_kdd_regular import *
 from utils import *
 import warnings
@@ -17,9 +16,6 @@ warnings.filterwarnings("ignore")
 import os
 os.environ['LIGHTGBM_EXEC'] = "/Users/jacklee/LightGBM/lightgbm"
 
-def log_loss(y_true,y_preds):
-    import sklearn
-    return sklearn.metrics.log_loss(y_true,y_preds, labels=[ 0, 1,2, 3, 4,5, 6,7, 8,9,10,11])
 #获取特征或者中间预测结果
 def load_x(ds, preset):
     feature_parts = [Dataset.load_part(ds, part) for part in preset.get('features', [])]
@@ -30,6 +26,7 @@ def load_x(ds, preset):
         prediction_parts = list(map(preset['prediction_transform'], prediction_parts))  # 是否需要对上一次的预测做变换
 
     return hstack(feature_parts + prediction_parts)
+
 def extract_feature_names(preset):
     x = []
 
