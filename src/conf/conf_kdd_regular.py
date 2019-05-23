@@ -11,25 +11,18 @@ sys.path.insert(0, 'src/')
 sys.path.insert(0, 'models')
 sys.path.insert(0, './')
 
-
 from deep_model import *
 from meta_model import *
 from traditional_model import *
 import itertools
 from scipy.stats import boxcox
-from sklearn.ensemble import ExtraTreesRegressor, RandomForestRegressor, GradientBoostingRegressor, AdaBoostRegressor
 from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier, GradientBoostingClassifier, AdaBoostClassifier
 
 from keras.optimizers import SGD, Adam, Adadelta
 from sklearn.pipeline import Pipeline
-from sklearn.linear_model import Ridge
 from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVR
 from sklearn.svm import SVC
-
-from sklearn.neighbors import KNeighborsRegressor
 from sklearn.neighbors import KNeighborsClassifier
-
 from sklearn.decomposition import TruncatedSVD
 
 #############transform###############################################

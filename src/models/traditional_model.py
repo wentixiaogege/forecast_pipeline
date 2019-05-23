@@ -220,8 +220,7 @@ class Official_LightGBM(BaseAlgo):
     def predict_proba(self, X):
         return self.model.predict(X)
 
-    def optimize(self, X_train, y_train, X_eval, y_eval, param_grid, feval=None, seed=42):
-        feval = lambda y_pred, y_true: ('logloss', feval(y_true.get_label(), y_pred))
+    def optimize(self, X_train, y_train, X_eval, y_eval, param_grid, eval_func=None, seed=42):
 
         dtrain = lgb.Dataset(X_train, label=y_train)
         deval = lgb.Dataset(X_eval, label=y_eval)
@@ -241,8 +240,11 @@ class Official_LightGBM(BaseAlgo):
 
             self.iter = 0
 
-            model = lgb.train(params, dtrain, 10000, [(dtrain, 'train'), (deval, 'eval')], self.objective, feval,
-                              verbose_eval=2, early_stopping_rounds=100)
+            watchlist = [deval, dtrain]
+            watchnames = ['eval', 'train']
+
+            model = lgb.train(params, dtrain, 10000, valid_sets=watchlist,valid_names=watchnames, feval=eval_func,
+                              verbose_eval=20, early_stopping_rounds=100)
 
             print("Score %.5f at iteration %d" % (model.best_score, model.best_iteration))
 

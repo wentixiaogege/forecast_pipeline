@@ -146,7 +146,7 @@ if False:
         opt_train_x = hstack(opt_train_x)
         opt_eval_x = hstack(opt_eval_x)
 
-    preset['model'].optimize(opt_train_x, y_transform(opt_train_y), opt_eval_x, y_transform(opt_eval_y), preset['param_grid'], eval_func=lambda yt, yp: log_loss(y_inv_transform(yt), y_inv_transform(yp)))
+    preset['model'].optimize(opt_train_x, y_transform(opt_train_y), opt_eval_x, y_transform(opt_eval_y), preset['param_grid'], eval_func=eval_f)
 
 print("Loading test data...")
 test_x = load_x('test', preset)
