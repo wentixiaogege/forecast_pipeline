@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-from utils import Dataset
+from src.kdd2019_regular.utils import Dataset
 from geopy.distance import geodesic
 
 print(geodesic((30.28708,120.12802999999997), (28.7427,115.86572000000001)).m) #计算两个坐标直线距离

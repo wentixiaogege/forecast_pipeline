@@ -58,8 +58,8 @@ def load_prediction(split, name, mode='fulltrain'):
 class Dataset(object):
 
     part_types = {
-        'sid': 'd1',
-        'click_mode': 'd1',
+        'id': 'd1',
+        'target': 'd1',
         'numeric': 'd2',
         'numeric_lin': 'd2',
         'numeric_scaled': 'd2',

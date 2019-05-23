@@ -398,14 +398,14 @@ def gen_user_feas(data):
 
     data['gen_pre_mode_list'] = data.groupby('cat_pid')['click_mode'].apply(gen_pre_list,'gen_pre_mode_list')
     data['gen_pre_req_time_list'] = data.groupby('cat_pid')['req_time'].apply(gen_pre_list,'gen_pre_req_time_list')
+    print data.head()
 
 
-    data['cat_last_click_mode'] = data.gen_pre_mode_list.apply(lambda x:x[-1])
+    data['cat_last_click_mode'] = data.gen_pre_mode_list.apply(lambda x: x[-1])
     data['cat_last_click_mode'] = data.cat_last_click_mode.fillna(0)
 
     data['num_last_req_time'] = data.gen_pre_req_time_list.apply(lambda x:x[-1])
     data['num_last_req_time'] = data['num_last_req_time'].fillna(data.req_time.min())
-    print data.head()
     data['num_how_long_till_this_time'] = data['req_time'].astype(int) - data['num_last_req_time'].astype(int)
 
     def mode_num(x):

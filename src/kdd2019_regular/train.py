@@ -113,9 +113,9 @@ y_transform, y_inv_transform = preset.get('y_transform', (lambda y: y, lambda y:
 
 print("Loading train data...")
 train_x = load_x('train', preset)
-train_y = Dataset.load_part('train', 'click_mode')
+train_y = Dataset.load_part('train', 'target')
 train_p = np.zeros((train_x.shape[0], n_splits * n_bags,n_classes))
-train_r = Dataset.load('train', parts=np.unique(sum([b.requirements for b in feature_builders], ['click_mode'])))# trian reconstruct features
+train_r = Dataset.load('train', parts=np.unique(sum([b.requirements for b in feature_builders], ['target'])))# trian reconstruct features
 
 feature_names = extract_feature_names(preset)
 
@@ -154,6 +154,7 @@ test_r = Dataset.load('test', parts=np.unique([b.requirements for b in feature_b
 test_foldavg_p = np.zeros((test_x.shape[0], n_splits * n_bags * n_folds,n_classes))
 test_fulltrain_p = np.zeros((test_x.shape[0], n_bags,n_classes))
 
+#非线性
 if 'powers' in preset:
     print("Adding power features...")
 
@@ -349,15 +350,15 @@ f1_score1 = f1_score(train_y, y_aggregator(y_inv_transform(train_p), axis=1).arg
 
 # Aggregate predictions
 name = "%s-%s-%.5f" % (datetime.datetime.now().strftime('%Y%m%d-%H%M'), set_train, f1_score1)
-test_foldavg_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_foldavg_p), axis=1), index=Dataset.load_part('test', 'sid'))
+test_foldavg_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_foldavg_p), axis=1), index=Dataset.load_part('test', 'id'))
 test_foldavg_p_backup.to_csv('preds/%s-%s.csv' % (name, 'test_foldavg_p_backup'), header=True)
-test_fulltrain_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1), index=Dataset.load_part('test', 'sid'))
+test_fulltrain_p_backup = pd.DataFrame(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1), index=Dataset.load_part('test', 'id'))
 test_foldavg_p_backup.to_csv('preds/%s-%s.csv' % (name, 'test_foldavg_p_backup'), header=True)
 
 
-train_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(train_p), axis=1),axis=1), index=Dataset.load_part('train', 'sid'))
-test_foldavg_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_foldavg_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
-test_fulltrain_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1),axis=1), index=Dataset.load_part('test', 'sid'))
+train_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(train_p), axis=1),axis=1), index=Dataset.load_part('train', 'id'))
+test_foldavg_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_foldavg_p), axis=1),axis=1), index=Dataset.load_part('test', 'id'))
+test_fulltrain_p = pd.Series(np.argmax(y_aggregator(y_inv_transform(test_fulltrain_p), axis=1),axis=1), index=Dataset.load_part('test', 'id'))
 
 print('---------------------------------')
 print("CV f1_score: %.5f +- %.5f" % (f1_scores_mean, f1_scores_std))
